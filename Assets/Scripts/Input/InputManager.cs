@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Input
+namespace CultGame.Input
 {
     public class InputManager : MonoBehaviour
     {
