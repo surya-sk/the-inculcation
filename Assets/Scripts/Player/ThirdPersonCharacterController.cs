@@ -17,11 +17,14 @@ namespace Player
 
         private Vector2 inputDirection = Vector2.zero;
         private Vector3 moveAngle, playerVelocity = Vector3.zero;
+
+        private Animator animator;
         private CharacterController controller;
 
         void Start()
         {
             controller = GetComponent<CharacterController>();
+            animator = GetComponent<Animator>();
         }
 
         void Update()
@@ -62,11 +65,13 @@ namespace Player
         private void OnPlayerMovementPerformed(Vector2 direction)
         {
             inputDirection = direction;
+            animator.SetBool("Walk", true);
         }
 
         private void OnPlayerMovementCanceled()
         {
             inputDirection = Vector2.zero;
+            animator.SetBool("Walk", false);
         }
     }
 }
