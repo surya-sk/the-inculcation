@@ -24,7 +24,7 @@ namespace Car
         {
             if(carHintCanvas.enabled)
             {
-                if (Input.GetKeyDown(KeyCode.Y))
+                if (Input.GetKeyDown(KeyCode.Y) || Input.GetKeyDown(KeyCode.JoystickButton3))
                 {
                     playerRef.SetActive(false);
                     mainCamera.SetActive(false);

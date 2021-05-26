@@ -7,11 +7,10 @@ namespace Player
 {
     public class ThirdPersonCharacterController : MonoBehaviour
     {
-        [SerializeField]
-        private float playerSpeed = 4.0f;
+        public float playerSpeed = 4.0f;
+        public float rotationSpeed = 8.0f;
 
-        [SerializeField]
-        private float rotationSpeed = 8.0f;
+        public AudioSource footstepSound;  
 
         private float gravityValue = -9.81f;
 
@@ -44,6 +43,10 @@ namespace Player
             // If player is moving, calculate the rotation needed to face that direction, then smoothly rotate using lerp
             if (inputDirection != Vector2.zero)
             {
+                if (!footstepSound.isPlaying)
+                {
+                    footstepSound.Play();
+                }
                 float targetAngle = Mathf.Atan2(inputDirection.x, inputDirection.y) * Mathf.Rad2Deg + Camera.main.transform.eulerAngles.y;
                 Quaternion rotation = Quaternion.Euler(0f, targetAngle, 0f);
                 transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotationSpeed);
