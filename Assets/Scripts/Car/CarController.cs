@@ -23,6 +23,8 @@ namespace Car
         public float maxSteerAngle = 30f;
         public float motorForce = 50f;
 
+        public AudioSource engineRevSound;
+
 
         private void FixedUpdate()
         {
@@ -35,6 +37,10 @@ namespace Car
         {
             m_Horizontal = Input.GetAxisRaw("Horizontal");
             m_Vertical = Input.GetAxisRaw("Vertical");
+            if(m_Vertical > 0)
+            {
+                engineRevSound.Play();
+            }
         }
 
         private void Steer()
