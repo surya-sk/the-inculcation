@@ -37,7 +37,7 @@ namespace Car
         {
             m_Horizontal = Input.GetAxisRaw("Horizontal");
             m_Vertical = Input.GetAxisRaw("Vertical");
-            if(m_Vertical > 0)
+            if(m_Vertical > 0 && !engineRevSound.isPlaying)
             {
                 engineRevSound.Play();
             }
