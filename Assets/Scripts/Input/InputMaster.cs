@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Input/Input Master.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Input/InputMaster.inputactions'
 
 using System;
 using System.Collections;
@@ -14,7 +14,7 @@ namespace CultGame.Input
         public @InputMaster()
         {
             asset = InputActionAsset.FromJson(@"{
-    ""name"": ""Input Master"",
+    ""name"": ""InputMaster"",
     ""maps"": [
         {
             ""name"": ""Player"",
