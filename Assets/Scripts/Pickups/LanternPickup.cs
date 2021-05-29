@@ -19,6 +19,8 @@ using CultGame.Player;
                 if (Input.GetKeyDown(KeyCode.X))
                 {
                     playerRef.ActivateLantern();
+                    lanternCanvas.enabled = false;
+                    Destroy(gameObject);
                 }
             }
         }
