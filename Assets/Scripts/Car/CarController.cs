@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Car
+namespace CultGame.Car
 {
     public class CarController : MonoBehaviour
     {
@@ -35,8 +35,8 @@ namespace Car
         }
         private void GetInput()
         {
-            m_Horizontal = Input.GetAxisRaw("Horizontal");
-            m_Vertical = Input.GetAxisRaw("Vertical");
+            m_Horizontal = UnityEngine.Input.GetAxisRaw("Horizontal");
+            m_Vertical = UnityEngine.Input.GetAxisRaw("Vertical");
             if(m_Vertical > 0 && !engineRevSound.isPlaying)
             {
                 engineRevSound.Play();
