@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using CultGame.Input;
 
-namespace Player
+namespace CultGame.Player
 {
     public class ThirdPersonCharacterController : MonoBehaviour
     {
         public float playerSpeed = 4.0f;
         public float rotationSpeed = 8.0f;
-
-        public AudioSource footstepSound;  
+        public GameObject lantern;
+        public AudioSource footstepSound;
+        public RuntimeAnimatorController lanternAnim; 
 
         private float gravityValue = -9.81f;
 
@@ -24,6 +25,7 @@ namespace Player
         {
             controller = GetComponent<CharacterController>();
             animator = GetComponent<Animator>();
+            lantern.SetActive(false);
         }
 
         void Update()
@@ -75,6 +77,12 @@ namespace Player
         {
             inputDirection = Vector2.zero;
             animator.SetBool("Walk", false);
+        }
+
+        public void ActivateLantern()
+        {
+            lantern.SetActive(true);
+            animator.runtimeAnimatorController = lanternAnim;
         }
     }
 }
