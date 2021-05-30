@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace CultGame.Car
@@ -13,6 +11,7 @@ namespace CultGame.Car
         public GameObject carCamera;
         public bool isDriving;
         public bool canGetOut;
+        public GameObject nextObjectiveToExitCar;
 
         public AudioSource engineStartSound;
 
@@ -30,6 +29,10 @@ namespace CultGame.Car
                 {
                     isDriving = true;
                 }
+            }
+            if(nextObjectiveToExitCar.GetComponent<BoxCollider>().enabled)
+            {
+                canGetOut = true;
             }
             if(isDriving)
             {
