@@ -27,7 +27,7 @@ namespace CultGame.Objectives
         {
             if (currentObjective == null)
             {
-                currentObjective = "Go to the office";
+                currentObjective = "-";
             }
             return currentObjective;
         }

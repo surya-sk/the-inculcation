@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectiveString: Drive to the cabin
-  objectiveText: {fileID: 929469856}
+  objectiveText: {fileID: 1203943745}
   nextObjective: {fileID: 548553423}
   firstObjective: {fileID: 101783679}
   pickupClip: {fileID: 8300000, guid: 418f7d94e80ab4d449b4dcac809a77fd, type: 3}
@@ -544,7 +544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectiveString: Follow the road
-  objectiveText: {fileID: 929469856}
+  objectiveText: {fileID: 1203943745}
   nextObjective: {fileID: 0}
   firstObjective: {fileID: 548553423}
   pickupClip: {fileID: 8300000, guid: 418f7d94e80ab4d449b4dcac809a77fd, type: 3}
@@ -651,6 +651,18 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 5308443322533650751, guid: 5547e9f32c9ab7d488686b41861cd3db, type: 2}
+    - target: {fileID: 1676131243, guid: 48e5c8a6e3036e244953042278ab4fc8, type: 3}
+      propertyPath: m_Name
+      value: Objective Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676131245, guid: 48e5c8a6e3036e244953042278ab4fc8, type: 3}
+      propertyPath: m_text
+      value: FIRST objective
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676131245, guid: 48e5c8a6e3036e244953042278ab4fc8, type: 3}
+      propertyPath: m_margin.w
+      value: 26.839111
+      objectReference: {fileID: 0}
     - target: {fileID: 3956762955485063481, guid: 48e5c8a6e3036e244953042278ab4fc8, type: 3}
       propertyPath: m_Name
       value: UI
@@ -710,17 +722,6 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 148567498, guid: 48e5c8a6e3036e244953042278ab4fc8, type: 3}
   m_PrefabInstance: {fileID: 929469854}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &929469856 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 813485840, guid: 48e5c8a6e3036e244953042278ab4fc8, type: 3}
-  m_PrefabInstance: {fileID: 929469854}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &989911594
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,6 +1177,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5794594375448414457, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
   m_PrefabInstance: {fileID: 1195753569}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1203943745 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1676131245, guid: 48e5c8a6e3036e244953042278ab4fc8, type: 3}
+  m_PrefabInstance: {fileID: 929469854}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1363673263 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5745408576344579541, guid: 708740d3c95453f43808b02c078f2dec, type: 3}

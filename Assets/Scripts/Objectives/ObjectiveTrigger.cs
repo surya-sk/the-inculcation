@@ -27,7 +27,7 @@ namespace CultGame.Objectives
         {
             if (other.gameObject.tag == "Player")
             {
-                objective = objectiveString;
+                objective = $"- {objectiveString}";
                 objectiveText.text = objective;
                 AudioSource.PlayClipAtPoint(pickupClip, other.gameObject.transform.position);
                 isFinished = true;
