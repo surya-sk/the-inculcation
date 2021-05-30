@@ -12,6 +12,7 @@ namespace CultGame.Car
         public GameObject cinemachineCamera;
         public GameObject carCamera;
         public bool isDriving;
+        public bool canGetOut;
 
         public AudioSource engineStartSound;
 
@@ -45,7 +46,25 @@ namespace CultGame.Car
             carHintCanvas.enabled = false;
             GetComponent<CarController>().enabled = true;
             engineStartSound.Play();
-            
+            if(canGetOut)
+            {
+                if (UnityEngine.Input.GetKeyDown(KeyCode.Y) || UnityEngine.Input.GetKeyDown(KeyCode.JoystickButton3))
+                {
+                    DeactivateDriving();
+                }
+            }
+        }
+
+        private void DeactivateDriving()
+        {
+            playerRef.transform.position = new Vector3(transform.position.x - 4, 0, transform.position.z);
+            playerRef.SetActive(true);
+            mainCamera.SetActive(true);
+            cinemachineCamera.SetActive(true);
+            carCamera.SetActive(false);
+            carHintCanvas.enabled = false;
+            GetComponent<CarController>().enabled = false;
+            isDriving = false;
         }
 
         private void OnTriggerEnter(Collider other)
