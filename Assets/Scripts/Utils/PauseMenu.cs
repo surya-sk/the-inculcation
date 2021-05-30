@@ -13,7 +13,7 @@ namespace CultGame.Utils
 
         private void Update()
         {
-            if (UnityEngine.Input.GetKeyDown(KeyCode.Escape) || UnityEngine.Input.GetButtonDown("Esc"))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Escape) || UnityEngine.Input.GetKeyDown(KeyCode.JoystickButton7)) 
             {
                 if (isPaused)
                 {
