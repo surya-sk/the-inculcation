@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CultGame.Saving;
 
 namespace CultGame.Car
 {
-    public class CarController : MonoBehaviour
+    public class CarController : MonoBehaviour, ISaveable
     {
         private float m_Horizontal;
         private float m_Vertical;
@@ -73,6 +74,17 @@ namespace CultGame.Car
 
             _transform.position = position;
             _transform.rotation = rotation;
+        }
+
+        public object CaptureState()
+        {
+            return new SerializableVector3(transform.position);
+        }
+
+        public void RestoreState(object state)
+        {
+            SerializableVector3 position = (SerializableVector3)state;
+            transform.position = position.ConvertToVector();
         }
     }
 }

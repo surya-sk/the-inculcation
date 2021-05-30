@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CultGame.Input;
+using CultGame.Saving;
+using System;
 
 namespace CultGame.Player
 {
-    public class ThirdPersonCharacterController : MonoBehaviour
+    public class ThirdPersonCharacterController : MonoBehaviour, ISaveable
     {
         public float playerSpeed = 4.0f;
         public float rotationSpeed = 8.0f;
@@ -83,6 +85,17 @@ namespace CultGame.Player
         {
             lantern.SetActive(true);
             animator.runtimeAnimatorController = lanternAnim;
+        }
+
+        public object CaptureState()
+        {
+            return new SerializableVector3(transform.position);
+        }
+
+        public void RestoreState(object state)
+        {
+            SerializableVector3 position = (SerializableVector3)state;
+            transform.position = position.ConvertToVector();
         }
     }
 }
