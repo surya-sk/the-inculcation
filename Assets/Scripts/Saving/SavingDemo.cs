@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CultGame.Utils
+using CultGame.Utils;
 
 namespace CultGame.Saving
 {
