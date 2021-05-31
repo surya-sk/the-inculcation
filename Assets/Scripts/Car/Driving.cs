@@ -1,8 +1,9 @@
 using UnityEngine;
+using CultGame.Saving;
 
 namespace CultGame.Car
 {
-    public class Driving : MonoBehaviour
+    public class Driving : MonoBehaviour, ISaveable
     {
         public Canvas carHintCanvas;
         public GameObject playerRef;
@@ -85,6 +86,16 @@ namespace CultGame.Car
             {
                 carHintCanvas.enabled = false;
             }
+        }
+
+        public object CaptureState()
+        {
+            return isDriving;
+        }
+
+        public void RestoreState(object state)
+        {
+            isDriving = (bool)state;
         }
     }
 }
