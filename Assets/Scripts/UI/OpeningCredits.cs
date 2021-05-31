@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using CultGame.Utils;
 
 namespace CultGame.UI
 {
@@ -13,6 +14,7 @@ namespace CultGame.UI
         public string[] artists;
         public TextMeshProUGUI title;
         public float timeBetweenCredits;
+        public SceneLoader sceneLoader;
 
         private void Start()
         {
@@ -33,7 +35,7 @@ namespace CultGame.UI
             personText.enabled = false;
             title.enabled = true;
             yield return new WaitForSeconds(timeBetweenCredits);
-            // Load next scene here
+            sceneLoader.LoadScene(3);
         }
     }
 }
