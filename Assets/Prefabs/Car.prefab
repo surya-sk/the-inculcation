@@ -2963,9 +2963,10 @@ GameObject:
   - component: {fileID: 3725331177106886903}
   - component: {fileID: 3725331177106886904}
   - component: {fileID: 3725331177106886902}
+  - component: {fileID: 705031069}
   m_Layer: 0
   m_Name: Car
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3263,7 +3264,23 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   cinemachineCamera: {fileID: 0}
   carCamera: {fileID: 8133208478564981801}
+  isDriving: 1
+  canGetOut: 0
+  nextObjectiveToExitCar: {fileID: 0}
   engineStartSound: {fileID: 3725331177106886903}
+--- !u!114 &705031069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4858819891837381377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d7f21dbbcbd7a4481ccf47b193a9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueId: 38de1bc0-c493-4916-b01b-a419c184de90
 --- !u!1 &8133208478564981801
 GameObject:
   m_ObjectHideFlags: 0

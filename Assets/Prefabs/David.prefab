@@ -2274,6 +2274,7 @@ GameObject:
   - component: {fileID: 7104830351210227273}
   - component: {fileID: 7104830351210227271}
   - component: {fileID: 7104830351210227270}
+  - component: {fileID: 903507683}
   m_Layer: 0
   m_Name: David
   m_TagString: Player
@@ -2450,7 +2451,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 4
   rotationSpeed: 8
+  lantern: {fileID: 1547115961464145}
   footstepSound: {fileID: 7104830351210227271}
+  lanternAnim: {fileID: 9100000, guid: b676bd84619d1a04db081ffbe53d7489, type: 2}
+--- !u!114 &903507683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7951109945345965654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d7f21dbbcbd7a4481ccf47b193a9f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueId: 416c1555-5be0-47e9-b2e5-8d10dd2b336c
 --- !u!1 &7971248575548595672
 GameObject:
   m_ObjectHideFlags: 0
@@ -2922,6 +2938,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68f8cf3372c588f4a94bf2c9bd255d3b, type: 3}
+--- !u!1 &1547115961464145 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1547116794882362, guid: 68f8cf3372c588f4a94bf2c9bd255d3b, type: 3}
+  m_PrefabInstance: {fileID: 867376235}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4533943917432287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4533944226828724, guid: 68f8cf3372c588f4a94bf2c9bd255d3b, type: 3}
