@@ -34,6 +34,12 @@ namespace CultGame.Car
             Accerlerate();
             UpdateWheelPoses();
         }
+
+        private void OnDisable()
+        {
+            engineRevSound.Stop();
+        }
+
         private void GetInput()
         {
             m_Horizontal = UnityEngine.Input.GetAxisRaw("Horizontal");

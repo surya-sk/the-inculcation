@@ -67,6 +67,7 @@ namespace CultGame.Car
             carCamera.SetActive(false);
             carHintCanvas.enabled = false;
             GetComponent<CarController>().enabled = false;
+            engineStartSound.Stop();
             isDriving = false;
         }
 
