@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +9,7 @@ namespace CultGame.Utils
 {
     public class SceneLoader : MonoBehaviour
     {
-        //public TextMeshProUGUI loadingText;
+        public TextMeshProUGUI loadingText;
         public void ReloadGame()
         {
             SceneManager.LoadScene(0);
@@ -24,18 +25,15 @@ namespace CultGame.Utils
 
         public void StartGame()
         {
-            if (File.Exists(Path.Combine(Application.persistentDataPath, "Chapter 3.sav")))
-            {
-                Chapter3();
-            }
-            else if (File.Exists(Path.Combine(Application.persistentDataPath, "Chapter 2.sav")))
-            {
-                Chapter2();
-            }
-            else
-            {
-                Chapter1();
-            }
+            //if (File.Exists(Path.Combine(Application.persistentDataPath, "Chapter 3.sav")))
+            //{
+            //}
+            //else if (File.Exists(Path.Combine(Application.persistentDataPath, "Chapter 2.sav")))
+            //{
+            //}
+            //else
+            //{
+            //}
         }
 
         public void RestartGame()
@@ -44,41 +42,26 @@ namespace CultGame.Utils
             StartGame();
         }
 
-        public void Tutorial()
+
+        public void LoadScene(int index)
         {
-            LoadScene(1);
+            StartCoroutine(LoadAsync(index));
         }
 
-        public void Chapter1()
+        IEnumerator LoadAsync(int sceneIndex)
         {
-            LoadScene(2);
+            AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
+            if (operation.progress < 1.0)
+            {
+                if(loadingText != null)
+                {
+                    loadingText.text = "Loading...";
+                }
+                yield return new WaitForSeconds(3);
+            }
+            loadingText.text = string.Empty;
         }
 
-        private void LoadScene(int index)
-        {
-            //StartCoroutine(LoadAsync(index));
-        }
-
-        //IEnumerator LoadAsync(int sceneIndex)
-        //{
-        //    AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
-        //    if (operation.progress < 1.0)
-        //    {
-        //        loadingText.text = "Loading...";
-        //        yield return new WaitForSeconds(3);
-        //    }
-        //    loadingText.text = string.Empty;
-        //}
-
-        public void Chapter2()
-        {
-            LoadScene(3);
-        }
-
-        public void Chapter3()
-        {
-            LoadScene(8);
-        }
         public void QuitGame()
         {
             Application.Quit();
@@ -89,10 +72,6 @@ namespace CultGame.Utils
             SceneManager.LoadSceneAsync(4);
         }
 
-        public void Credits()
-        {
-            SceneManager.LoadScene(7);
-        }
         public string GetSceneName()
         {
             return SceneManager.GetActiveScene().name;
