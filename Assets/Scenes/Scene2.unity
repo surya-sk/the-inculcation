@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.041006096, g: 0.034235686, b: 0.03721273, a: 1}
+  m_IndirectSpecularColor: {r: 0.20076263, g: 0.21921647, b: 0.23360038, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -160,11 +160,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5794594375448414460, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000003808365
+      value: -0.00000003808365
       objectReference: {fileID: 0}
     - target: {fileID: 5794594375448414460, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000005471138
+      value: 0.000000005471138
       objectReference: {fileID: 0}
     - target: {fileID: 5794594375448414460, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -272,7 +272,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1.65
+  m_Intensity: 1.7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -315,7 +315,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
-  m_ColorTemperature: 11288
+  m_ColorTemperature: 3608
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 1.65
+  m_Intensity: 1.7
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -515,7 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8892b3b734f5e049a0ca6aa8f8becc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectiveString: Stop at the opening
+  objectiveString: Stop at the sign
   objectiveText: {fileID: 452366834}
   nextObjective: {fileID: 2060104582}
   firstObjective: {fileID: 483093858}
@@ -529,7 +529,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101055894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 898.3, y: -0.3, z: 344.2}
+  m_LocalPosition: {x: 898.3, y: -0.3, z: 329.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 784582816}
@@ -1241,11 +1241,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802636613784, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000019041824
+      value: -0.000000019041822
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802636613784, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000002735569
+      value: 0.0000000027355689
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802643480863, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1649,13 +1649,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1523558415}
-  m_LocalRotation: {x: -0, y: -0.038903244, z: -0, w: 0.99924296}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.1851564, z: -0, w: 0.9827091}
+  m_LocalPosition: {x: 0.066, y: 0, z: 0.165}
   m_LocalScale: {x: 0.30718997, y: 0.30719, z: 0.30718997}
   m_Children: []
   m_Father: {fileID: 2116176552}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -4.459, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -21.34, z: 0}
 --- !u!1 &1616003144 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5794594375448414457, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
@@ -1830,7 +1830,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060104582}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 898.3, y: 0.18, z: 402}
+  m_LocalPosition: {x: 893.1, y: 0.18, z: 377.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 784582816}
@@ -1874,7 +1874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8892b3b734f5e049a0ca6aa8f8becc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectiveString: Get out of the car and enter the woods
+  objectiveString: Enter the forest through the opening
   objectiveText: {fileID: 452366834}
   nextObjective: {fileID: 1437772239}
   firstObjective: {fileID: 483093858}
