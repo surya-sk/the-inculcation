@@ -196,6 +196,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8161125753708546148, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161125753708546148, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161125753708546148, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 8161125753708546150, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -295,6 +307,45 @@ PrefabInstance:
     - target: {fileID: 8161125753708546151, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
       propertyPath: m_Name
       value: Opening Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161125754294752816, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
+      propertyPath: m_text
+      value: "From: gwen.smith76@outlook.com\nTo: david.smith450@outlook.com\n\nSubject:
+        URGENT - Your father is missing\n\nDear Dave,\n\nYour father hasn't returned
+        home after his retirement party three days ago. I know you're usually busy
+        but I'm writing to you because I'm very worried. Please read this email and
+        search for him. I've already informed the cops, but none of them seem to
+        acting immediately. \n\nYour father left home on Friday to hang out with
+        his old bandmates, to celebrate his retirement. I've sent you his last known
+        location via SMS. It is near the cabin he used to jam at. So please have
+        a look in the cabin and see if he's there. If he isn't, go to his last known
+        location and look for him. I know you don't have the best relationship with
+        him, but I'm worried sick and would like you try and find him.\n\nGood luck
+        and be careful,\nMom."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161125754294752816, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
+      propertyPath: m_margin.x
+      value: -763.69025
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161125754294752816, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
+      propertyPath: m_margin.z
+      value: -773.1166
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161125754665653202, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161125754665653202, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 705.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161125754665653202, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000076294
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161125754665653202, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00077057
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
@@ -784,7 +835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 455, y: -240}
+  m_AnchoredPosition: {x: 596, y: -240}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &2138262599 stripped
