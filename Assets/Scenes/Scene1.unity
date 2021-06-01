@@ -1785,11 +1785,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5794594375448414460, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000003808365
+      value: 0.00000003808365
       objectReference: {fileID: 0}
     - target: {fileID: 5794594375448414460, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000005471138
+      value: -0.000000005471138
       objectReference: {fileID: 0}
     - target: {fileID: 5794594375448414460, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1911,11 +1911,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802636613784, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000019041822
+      value: 0.000000019041824
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802636613784, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000027355689
+      value: -0.000000002735569
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802643480863, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2437,22 +2437,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 103647011, guid: 708740d3c95453f43808b02c078f2dec, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 3434.043
-      objectReference: {fileID: 0}
-    - target: {fileID: 103647011, guid: 708740d3c95453f43808b02c078f2dec, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1353.522
-      objectReference: {fileID: 0}
-    - target: {fileID: 103647011, guid: 708740d3c95453f43808b02c078f2dec, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -178.9147
-      objectReference: {fileID: 0}
-    - target: {fileID: 103647011, guid: 708740d3c95453f43808b02c078f2dec, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -14.9299
-      objectReference: {fileID: 0}
     - target: {fileID: 2005911224, guid: 708740d3c95453f43808b02c078f2dec, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2544,10 +2528,6 @@ PrefabInstance:
     - target: {fileID: 5745408576344579541, guid: 708740d3c95453f43808b02c078f2dec, type: 3}
       propertyPath: m_Name
       value: Pause Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5745408576344579541, guid: 708740d3c95453f43808b02c078f2dec, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 708740d3c95453f43808b02c078f2dec, type: 3}

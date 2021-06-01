@@ -39,7 +39,6 @@ namespace CultGame.Car
             {
                 ActivateDriving();
             }
-            print(isDriving);
         }
 
         private void ActivateDriving()
