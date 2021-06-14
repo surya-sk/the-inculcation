@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16850722, g: 0.11024439, b: 0.07106936, a: 1}
+  m_IndirectSpecularColor: {r: 0.16822624, g: 0.108593464, b: 0.06752598, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3439,6 +3439,50 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8421606, y: 0.76622707, z: 0.4625787}
   m_Center: {x: -0.000015258789, y: 0.38311356, z: 0}
+--- !u!1 &1865969090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1865969092}
+  - component: {fileID: 1865969091}
+  m_Layer: 0
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &1865969091
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865969090}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.6039262, y: 12.27591, z: 188.8799}
+  m_Center: {x: -0.8019113, y: -1.9264989, z: -35.559074}
+--- !u!4 &1865969092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865969090}
+  m_LocalRotation: {x: -0, y: -0.46478704, z: -0, w: 0.8854225}
+  m_LocalPosition: {x: 920.3, y: 6.2, z: 2648.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: -55.393, z: 0}
 --- !u!1 &1896837839
 GameObject:
   m_ObjectHideFlags: 0
