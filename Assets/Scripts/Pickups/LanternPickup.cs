@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using CultGame.Player;
 
+ namespace CultGame.Pickups
+{
     public class LanternPickup : MonoBehaviour
     {
         public Canvas lanternCanvas;
@@ -14,9 +16,9 @@ using CultGame.Player;
 
         private void Update()
         {
-           if(lanternCanvas.enabled)
+            if (lanternCanvas.enabled)
             {
-                if (Input.GetKeyDown(KeyCode.X))
+                if (UnityEngine.Input.GetKeyDown(KeyCode.X))
                 {
                     playerRef.ActivateLantern();
                     lanternCanvas.enabled = false;
@@ -27,7 +29,7 @@ using CultGame.Player;
 
         private void OnTriggerEnter(Collider other)
         {
-            if(other.gameObject.tag == "Player")
+            if (other.gameObject.tag == "Player")
             {
                 lanternCanvas.enabled = true;
             }
@@ -42,3 +44,4 @@ using CultGame.Player;
         }
     }
 
+}
