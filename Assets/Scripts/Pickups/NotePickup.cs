@@ -28,20 +28,24 @@ namespace CultGame.Pickups
 
         void Update()
         {
+            
             if(promptCanvas.enabled && !isReadingText)
             {
                 if (UnityEngine.Input.GetKeyDown(KeyCode.X))
                 {
-                    isReadingText = true;                }
+                    isReadingText = true;                
+                }
             }
 
-            else if(isReadingText)
+            // Pop up note on the screen
+            else if (isReadingText)
             {
                 promptText.text = "Press X to exit";
                 noteCanvas.enabled = true;
                 Time.timeScale = 0;
                 if (UnityEngine.Input.GetKeyDown(KeyCode.X))
                 {
+                    // reset values
                     isReadingText = false;
                     noteCanvas.enabled = false;
                     Time.timeScale = 1;
