@@ -201,7 +201,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490874473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 269.8, y: 2.85, z: 205.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -637,7 +637,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069104324790046177}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 200.54102, y: -0.0000051259995, z: 211.29517}
+  m_LocalPosition: {x: 271, y: -0.0000051259995, z: 211.29517}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7466404979940978397}
@@ -869,6 +869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 404734716416202587}
+  - component: {fileID: 1069104324790046178}
   m_Layer: 0
   m_Name: Cultist_F
   m_TagString: Untagged
@@ -876,6 +877,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &1069104324790046178
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069104324790046177}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 9f15454ffec9c284eb823f68a0f4a3db, type: 3}
+  m_Controller: {fileID: 9100000, guid: 9be70274b70415a4499e03fd3a960ff3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1096977030811767848
 Transform:
   m_ObjectHideFlags: 0
