@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using CultGame.Utils;
 
 namespace CultGame.Enemy
 {
@@ -12,11 +13,15 @@ namespace CultGame.Enemy
         public float detectionRadius = 10f;
         public bool hasDetected = false;
         public Transform[] waypointArray;
+        public GameOver gameOverRef;
+        public string reasonOfDeath;
+
         Queue<Transform> waypoints;
         Animator animator;
         NavMeshAgent navMeshAgent;
         float distanceFromPlayer;
         Transform lastPoint;
+
 
         // Start is called before the first frame update
         void Start()
@@ -40,12 +45,10 @@ namespace CultGame.Enemy
         void Update()
         {
             distanceFromPlayer = Vector3.Distance(player.position, transform.position);
-            if (!hasDetected)
+
+            if(hasDetected)
             {
-                if (distanceFromPlayer <= detectionRadius)
-                {
-                    hasDetected = true;
-                }
+                gameOverRef.EndGame(reasonOfDeath);
             }
         }
 
@@ -75,6 +78,7 @@ namespace CultGame.Enemy
 
                 if (distanceFromPlayer <= detectionRadius)
                 {
+                    reasonOfDeath = "You were detected".ToUpper();
                     hasDetected = true;
                 }
             }
