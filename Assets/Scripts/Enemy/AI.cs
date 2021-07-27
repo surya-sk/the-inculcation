@@ -39,18 +39,19 @@ namespace CultGame.Enemy
         // Update is called once per frame
         void Update()
         {
-            //distanceFromPlayer = Vector3.Distance(player.position, transform.position);
-            //if(!hasDetected)
-            //{
-            //    if(distanceFromPlayer <= detectionRadius)
-            //    {
-            //        hasDetected = true;
-            //    }
-            //}
+            distanceFromPlayer = Vector3.Distance(player.position, transform.position);
+            if (!hasDetected)
+            {
+                if (distanceFromPlayer <= detectionRadius)
+                {
+                    hasDetected = true;
+                }
+            }
         }
 
         private void FixedUpdate()
         {
+            // Check if enemy reached final destination
             if(gameObject.tag == "Follow")
             {
                 if(Vector3.Distance(transform.position, lastPoint.position) <= 3.0)
@@ -61,6 +62,10 @@ namespace CultGame.Enemy
             }
         }
 
+        /// <summary>
+        /// A co-routine to make the enemy follow given waypoints
+        /// </summary>
+        /// <returns></returns>
         IEnumerator FollowWaypoint()
         {
             while(waypoints.Count != 0)
@@ -68,14 +73,18 @@ namespace CultGame.Enemy
                 Move(waypoints.Dequeue().position);
                 yield return new WaitForSeconds(0.5f);
 
-                //if(distanceFromPlayer <= detectionRadius)
-                //{
-                //    hasDetected = true;
-                //}
+                if (distanceFromPlayer <= detectionRadius)
+                {
+                    hasDetected = true;
+                }
             }
             
         }
 
+        /// <summary>
+        /// Move the enemy to the given destination
+        /// </summary>
+        /// <param name="destination"></param>
         private void Move(Vector3 destination)
         {
             animator.SetTrigger("Move");
