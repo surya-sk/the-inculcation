@@ -15,6 +15,7 @@ namespace CultGame.Player
         public AudioSource footstepSound;
         public RuntimeAnimatorController lanternAnim; 
 
+        // bad idea to mess with this
         private float gravityValue = -9.81f;
 
         private Vector2 inputDirection = Vector2.zero;
