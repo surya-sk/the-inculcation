@@ -33,6 +33,7 @@ namespace CultGame.Utils
             otherUI.SetActive(false);
             yield return new WaitForSeconds(4);
             sceneLoader.GameOver();
+            yield return new WaitForSeconds(0);
         }
     }
 

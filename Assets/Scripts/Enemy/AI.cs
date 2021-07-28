@@ -10,12 +10,12 @@ namespace CultGame.Enemy
     {
         public Transform player;
         public AudioSource walkSound;
-        public float detectionRadius = 10f;
+        public float detectionRadius = 15f;
         public bool hasDetected = false;
         public Transform[] waypointArray;
         public GameOver gameOverRef;
-        public string reasonOfDeath;
 
+        string reasonOfDeath;
         Queue<Transform> waypoints;
         Animator animator;
         NavMeshAgent navMeshAgent;
@@ -44,8 +44,6 @@ namespace CultGame.Enemy
         // Update is called once per frame
         void Update()
         {
-            distanceFromPlayer = Vector3.Distance(player.position, transform.position);
-
             if(hasDetected)
             {
                 gameOverRef.EndGame(reasonOfDeath);
@@ -57,10 +55,16 @@ namespace CultGame.Enemy
             // Check if enemy reached final destination
             if(gameObject.tag == "Follow")
             {
-                if(Vector3.Distance(transform.position, lastPoint.position) <= 3.0)
+                distanceFromPlayer = Vector3.Distance(player.position, transform.position);
+                if (Vector3.Distance(transform.position, lastPoint.position) <= 3.0)
                 {
                     animator.SetTrigger("Idle");
                     walkSound.Stop();
+                }
+                if (distanceFromPlayer <= detectionRadius)
+                {
+                    reasonOfDeath = "You were detected".ToUpper();
+                    hasDetected = true;
                 }
             }
         }
@@ -75,12 +79,6 @@ namespace CultGame.Enemy
             {
                 Move(waypoints.Dequeue().position);
                 yield return new WaitForSeconds(0.5f);
-
-                if (distanceFromPlayer <= detectionRadius)
-                {
-                    reasonOfDeath = "You were detected".ToUpper();
-                    hasDetected = true;
-                }
             }
             
         }
