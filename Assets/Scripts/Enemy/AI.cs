@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using CultGame.Utils;
+using CultGame.Player;
 
 namespace CultGame.Enemy
 {
@@ -37,6 +38,7 @@ namespace CultGame.Enemy
                 {
                     waypoints.Enqueue(t);
                 }
+                player.GetComponent<ThirdPersonCharacterController>().playerSpeed = 2.0f;
                 StartCoroutine(FollowWaypoint());
             }
         }
@@ -60,6 +62,7 @@ namespace CultGame.Enemy
                 {
                     animator.SetTrigger("Idle");
                     walkSound.Stop();
+                    player.GetComponent<ThirdPersonCharacterController>().playerSpeed = 4.0f;
                 }
                 if (distanceFromPlayer <= detectionRadius)
                 {
