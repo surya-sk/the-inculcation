@@ -4,10 +4,11 @@ using UnityEngine;
 using UnityEngine.AI;
 using CultGame.Utils;
 using CultGame.Player;
+using CultGame.Saving;
 
 namespace CultGame.Enemy
 {
-    public class AI : MonoBehaviour
+    public class AI : MonoBehaviour, ISaveable
     {
         public Transform player;
         public AudioSource walkSound;
@@ -98,6 +99,17 @@ namespace CultGame.Enemy
             {
                 walkSound.Play();
             }
+        }
+
+        public object CaptureState()
+        {
+            return new SerializableVector3(transform.position);
+        }
+
+        public void RestoreState(object state)
+        {
+            SerializableVector3 position = (SerializableVector3)state;
+            transform.position = position.ConvertToVector();
         }
     }
 }
