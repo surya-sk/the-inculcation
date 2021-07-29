@@ -38,7 +38,7 @@ namespace CultGame.Enemy
                 {
                     waypoints.Enqueue(t);
                 }
-                player.GetComponent<ThirdPersonCharacterController>().playerSpeed = 2.0f;
+                player.GetComponent<ThirdPersonCharacterController>().playerSpeed = 3.0f;
                 StartCoroutine(FollowWaypoint());
             }
         }

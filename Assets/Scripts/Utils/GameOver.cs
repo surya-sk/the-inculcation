@@ -27,13 +27,11 @@ namespace CultGame.Utils
         IEnumerator TriggerGameOver()
         {
             gameOverCanvas.enabled = true;
-            Time.timeScale = 0;
             AudioListener.pause = true;
             pauseMenu.SetActive(false);
             otherUI.SetActive(false);
             yield return new WaitForSeconds(4);
             sceneLoader.GameOver();
-            yield return new WaitForSeconds(0);
         }
     }
 
