@@ -60,7 +60,8 @@ namespace CultGame.Enemy
         IEnumerator FollowWaypoint()
         {
             Vector3 destination = waypoints.Dequeue().position;
-            while(destination != lastPoint.position)
+            bool destinationReached = false;
+            while(!destinationReached)
             {
                 distanceFromPlayer = Vector3.Distance(player.position, transform.position);
                 Move(destination);
@@ -69,11 +70,12 @@ namespace CultGame.Enemy
                     destination = waypoints.Dequeue().position;
                 }
 
-                if (Vector3.Distance(transform.position, lastPoint.position) <= 3.0)
+                if (Vector3.Distance(transform.position, lastPoint.position) <= 2.0)
                 {
                     animator.SetTrigger("Idle");
                     walkSound.Stop();
                     player.GetComponent<ThirdPersonCharacterController>().playerSpeed = 4.0f;
+                    destinationReached = true;
                 }
 
                 if (distanceFromPlayer <= detectionRadius)
