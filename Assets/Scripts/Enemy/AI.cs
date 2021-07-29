@@ -53,35 +53,35 @@ namespace CultGame.Enemy
             }
         }
 
-        private void FixedUpdate()
-        {
-            // Check if enemy reached final destination
-            if(gameObject.tag == "Follow")
-            {
-                distanceFromPlayer = Vector3.Distance(player.position, transform.position);
-                if (Vector3.Distance(transform.position, lastPoint.position) <= 3.0)
-                {
-                    animator.SetTrigger("Idle");
-                    walkSound.Stop();
-                    player.GetComponent<ThirdPersonCharacterController>().playerSpeed = 4.0f;
-                }
-                if (distanceFromPlayer <= detectionRadius)
-                {
-                    reasonOfDeath = "You were detected".ToUpper();
-                    hasDetected = true;
-                }
-            }
-        }
-
         /// <summary>
         /// A co-routine to make the enemy follow given waypoints
         /// </summary>
         /// <returns></returns>
         IEnumerator FollowWaypoint()
         {
-            while(waypoints.Count != 0)
+            Vector3 destination = waypoints.Dequeue().position;
+            while(destination != lastPoint.position)
             {
-                Move(waypoints.Dequeue().position);
+                distanceFromPlayer = Vector3.Distance(player.position, transform.position);
+                Move(destination);
+                if(Vector3.Distance(transform.position, destination) < 3.0)
+                {
+                    destination = waypoints.Dequeue().position;
+                }
+
+                if (Vector3.Distance(transform.position, lastPoint.position) <= 3.0)
+                {
+                    animator.SetTrigger("Idle");
+                    walkSound.Stop();
+                    player.GetComponent<ThirdPersonCharacterController>().playerSpeed = 4.0f;
+                }
+
+                if (distanceFromPlayer <= detectionRadius)
+                {
+                    reasonOfDeath = "You were detected".ToUpper();
+                    hasDetected = true;
+                }
+
                 yield return new WaitForSeconds(0.5f);
             }
             
