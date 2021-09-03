@@ -31,16 +31,29 @@ namespace CultGame.Enemy
             navMeshAgent = GetComponent<NavMeshAgent>();
             animator = GetComponent<Animator>();
 
-            if(gameObject.tag == "Follow")
+            switch(gameObject.tag)
             {
-                waypoints = new Queue<Transform>();
-                lastPoint = waypointArray[waypointArray.Length - 1];
-                foreach (Transform t in waypointArray)
-                {
-                    waypoints.Enqueue(t);
-                }
-                player.GetComponent<ThirdPersonCharacterController>().playerSpeed = 3.0f;
-                StartCoroutine(FollowWaypoint());
+                case "Follow":
+                    InitWaypointQueue();
+                    player.GetComponent<ThirdPersonCharacterController>().playerSpeed = 3.0f;
+                    StartCoroutine(FollowWaypoint());
+                    break;
+                case "Pray":
+                    StartCoroutine(Pray());
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Adds waypoints to the queue for convinience
+        /// </summary>
+        private void InitWaypointQueue()
+        {
+            waypoints = new Queue<Transform>();
+            lastPoint = waypointArray[waypointArray.Length - 1];
+            foreach (Transform t in waypointArray)
+            {
+                waypoints.Enqueue(t);
             }
         }
 
@@ -54,6 +67,19 @@ namespace CultGame.Enemy
         }
 
         /// <summary>
+        /// Checks if the player is within detection range 
+        /// </summary>
+        private void CheckPlayerDetection()
+        {
+            distanceFromPlayer = Vector3.Distance(player.position, transform.position);
+            if (distanceFromPlayer <= detectionRadius)
+            {
+                reasonOfDeath = "You were detected".ToUpper();
+                hasDetected = true;
+            }
+        }
+
+        /// <summary>
         /// A co-routine to make the enemy follow given waypoints
         /// </summary>
         /// <returns></returns>
@@ -63,9 +89,8 @@ namespace CultGame.Enemy
             bool destinationReached = false;
             while(!destinationReached)
             {
-                distanceFromPlayer = Vector3.Distance(player.position, transform.position);
                 Move(destination);
-                if(Vector3.Distance(transform.position, destination) < 3.0)
+                if (Vector3.Distance(transform.position, destination) < 3.0)
                 {
                     destination = waypoints.Dequeue().position;
                 }
@@ -78,15 +103,21 @@ namespace CultGame.Enemy
                     destinationReached = true;
                 }
 
-                if (distanceFromPlayer <= detectionRadius)
-                {
-                    reasonOfDeath = "You were detected".ToUpper();
-                    hasDetected = true;
-                }
+                CheckPlayerDetection();
 
                 yield return new WaitForSeconds(0.5f);
             }
-            
+
+        }
+
+        IEnumerator Pray()
+        {
+            animator.SetTrigger("Pray");
+            while(gameObject.activeSelf)
+            {
+                CheckPlayerDetection();
+                yield return new WaitForSeconds(0.5f);
+            }
         }
 
         /// <summary>
