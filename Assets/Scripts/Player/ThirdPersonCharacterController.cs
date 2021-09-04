@@ -13,7 +13,8 @@ namespace CultGame.Player
         public float rotationSpeed = 8.0f;
         public GameObject lantern;
         public AudioSource footstepSound;
-        public RuntimeAnimatorController lanternAnim; 
+        public RuntimeAnimatorController lanternAnim;
+        public RuntimeAnimatorController crouchAnim;
 
         // bad idea to mess with this
         private float gravityValue = -9.81f;
