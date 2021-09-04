@@ -13,14 +13,16 @@ namespace CultGame.Player
         public float rotationSpeed = 8.0f;
         public GameObject lantern;
         public AudioSource footstepSound;
-        public RuntimeAnimatorController lanternAnim;
-        public RuntimeAnimatorController crouchAnim;
+        public RuntimeAnimatorController defaultAnimController;
+        public RuntimeAnimatorController lanternAnimController;
+        public RuntimeAnimatorController crouchAnimController;
 
         // bad idea to mess with this
         private float gravityValue = -9.81f;
 
         private Vector2 inputDirection = Vector2.zero;
         private Vector3 moveAngle, playerVelocity = Vector3.zero;
+        private bool isCrouched;
 
         private Animator animator;
         private CharacterController controller;
@@ -30,6 +32,7 @@ namespace CultGame.Player
             controller = GetComponent<CharacterController>();
             animator = GetComponent<Animator>();
             lantern.SetActive(false);
+            isCrouched = false;
         }
 
         void Update()
@@ -42,6 +45,22 @@ namespace CultGame.Player
             // Set y velocity and move for gravity (add y velocity in future to add jumping)
             playerVelocity.y += gravityValue;
             controller.Move(playerVelocity * Time.deltaTime);
+
+            if(UnityEngine.Input.GetKeyDown(KeyCode.C))
+            {
+                isCrouched = !isCrouched;
+            }
+
+            if(isCrouched)
+            {
+                animator.runtimeAnimatorController = crouchAnimController;
+                footstepSound.volume = 0.06f;
+            }
+            else
+            {
+                animator.runtimeAnimatorController = defaultAnimController;
+                footstepSound.volume = 0.15f;
+            }
 
             // Move character in direction of moveAngle, multiply by deltaTime for time-dependency, along with playerSpeed
             controller.Move(moveAngle * Time.deltaTime * playerSpeed);
@@ -86,7 +105,7 @@ namespace CultGame.Player
         public void ActivateLantern()
         {
             lantern.SetActive(true);
-            animator.runtimeAnimatorController = lanternAnim;
+            animator.runtimeAnimatorController = lanternAnimController;
         }
 
         public object CaptureState()
