@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.16823542, g: 0.10904193, b: 0.06855869, a: 1}
+  m_IndirectSpecularColor: {r: 0.16822195, g: 0.108585, b: 0.06752455, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -19814,11 +19814,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802312317756, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000017073113
+      value: 0.00000001707311
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802312317756, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000021373874
+      value: -0.000000002137387
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802636613784, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.w
@@ -19858,11 +19858,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802643480863, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000004160263
+      value: -0.000000041602625
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802643480863, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000067511756
+      value: 0.000000006751175
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
@@ -23045,6 +23045,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 903507688}
     - target: {fileID: 7104830351210227270, guid: 4a25fbd08f5a7d74591ad90bb2d9d6ec, type: 3}
+      propertyPath: runSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104830351210227270, guid: 4a25fbd08f5a7d74591ad90bb2d9d6ec, type: 3}
       propertyPath: walkClip
       value: 
       objectReference: {fileID: 8300000, guid: 1cad41b22bc2394469b1c234dfa59136, type: 3}
@@ -23064,6 +23068,10 @@ PrefabInstance:
       propertyPath: lanternAnimController
       value: 
       objectReference: {fileID: 9100000, guid: b676bd84619d1a04db081ffbe53d7489, type: 2}
+    - target: {fileID: 7104830351210227271, guid: 4a25fbd08f5a7d74591ad90bb2d9d6ec, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7104830351210227271, guid: 4a25fbd08f5a7d74591ad90bb2d9d6ec, type: 3}
       propertyPath: m_Volume
       value: 1
