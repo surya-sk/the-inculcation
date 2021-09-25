@@ -51,6 +51,17 @@ namespace CultGame.Player
                 isCrouched = !isCrouched;
             }
 
+            if(UnityEngine.Input.GetKey(KeyCode.LeftShift))
+            {
+                animator.SetBool("Run", true);
+                playerSpeed = 10.0f;
+            }
+            else
+            {
+                animator.SetBool("Run", false);
+                playerSpeed = 4.0f;
+            }
+
             if(isCrouched)
             {
                 animator.runtimeAnimatorController = crouchAnimController;
