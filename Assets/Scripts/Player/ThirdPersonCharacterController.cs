@@ -9,10 +9,13 @@ namespace CultGame.Player
 {
     public class ThirdPersonCharacterController : MonoBehaviour, ISaveable
     {
-        public float playerSpeed = 4.0f;
+        public float playerSpeed = 0f;
+        public float walkSpeed = 4.0f;
+        public float runSpeed = 10.0f;
         public float rotationSpeed = 8.0f;
         public GameObject lantern;
-        public AudioSource footstepSound;
+        public AudioSource walkSound;
+        public AudioSource runSound;
         public RuntimeAnimatorController defaultAnimController;
         public RuntimeAnimatorController lanternAnimController;
         public RuntimeAnimatorController crouchAnimController;
@@ -23,6 +26,7 @@ namespace CultGame.Player
         private Vector2 inputDirection = Vector2.zero;
         private Vector3 moveAngle, playerVelocity = Vector3.zero;
         private bool isCrouched;
+        private bool isRunning;
 
         private Animator animator;
         private CharacterController controller;
@@ -31,8 +35,10 @@ namespace CultGame.Player
         {
             controller = GetComponent<CharacterController>();
             animator = GetComponent<Animator>();
+            playerSpeed = walkSpeed;
             lantern.SetActive(false);
             isCrouched = false;
+            isRunning = false;
         }
 
         void Update()
@@ -46,32 +52,34 @@ namespace CultGame.Player
             playerVelocity.y += gravityValue;
             controller.Move(playerVelocity * Time.deltaTime);
 
-            if(UnityEngine.Input.GetKeyDown(KeyCode.C))
+            if(UnityEngine.Input.GetKeyDown(KeyCode.C) && !isRunning)
             {
                 isCrouched = !isCrouched;
             }
 
-            if(UnityEngine.Input.GetKey(KeyCode.LeftShift))
+            if(UnityEngine.Input.GetKey(KeyCode.LeftShift) && !isCrouched)
             {
                 animator.SetBool("Run", true);
-                playerSpeed = 10.0f;
+                playerSpeed = runSpeed;
+                isRunning = true;
             }
             else
             {
                 animator.SetBool("Run", false);
-                playerSpeed = 4.0f;
+                playerSpeed = walkSpeed;
+                isRunning = false;
             }
 
-            if(isCrouched)
-            {
-                animator.runtimeAnimatorController = crouchAnimController;
-                footstepSound.volume = 0.06f;
-            }
-            else
-            {
-                animator.runtimeAnimatorController = defaultAnimController;
-                footstepSound.volume = 0.15f;
-            }
+            //if(isCrouched)
+            //{
+            //    animator.SetBool("Sneak", true);
+            //    walkSound.volume = 0.06f;
+            //}
+            //else
+            //{
+            //    animator.SetBool("Sneak", false);
+            //    walkSound.volume = 0.15f;
+            //}
 
             // Move character in direction of moveAngle, multiply by deltaTime for time-dependency, along with playerSpeed
             controller.Move(moveAngle * Time.deltaTime * playerSpeed);
@@ -79,13 +87,32 @@ namespace CultGame.Player
             // If player is moving, calculate the rotation needed to face that direction, then smoothly rotate using lerp
             if (inputDirection != Vector2.zero)
             {
-                if (!footstepSound.isPlaying)
+                if(isRunning)
                 {
-                    footstepSound.Play();
+                    walkSound.Stop();
+                    if (!runSound.isPlaying)
+                    {
+                        runSound.Play();
+                    }
                 }
+                else
+                {
+                    runSound.Stop();
+                    if (!walkSound.isPlaying)
+                    {
+                        walkSound.Play();
+                    }
+                }
+
                 float targetAngle = Mathf.Atan2(inputDirection.x, inputDirection.y) * Mathf.Rad2Deg + Camera.main.transform.eulerAngles.y;
                 Quaternion rotation = Quaternion.Euler(0f, targetAngle, 0f);
                 transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * rotationSpeed);
+            }
+            else
+            {
+                isCrouched = false;
+                runSound.Stop();
+                walkSound.Stop();
             }
         }
 
