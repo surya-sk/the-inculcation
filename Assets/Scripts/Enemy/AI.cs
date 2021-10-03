@@ -43,7 +43,7 @@ namespace CultGame.Enemy
                     StartCoroutine(Pray());
                     break;
                 case "Relax":
-                    StartCoroutine(Relax(random.Next(3)));
+                    StartCoroutine(Relax(random.Next(0,2)));
                     break;
             }
         }
