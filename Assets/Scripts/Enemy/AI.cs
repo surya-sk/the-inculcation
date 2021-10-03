@@ -17,6 +17,7 @@ namespace CultGame.Enemy
         public bool hasDetected = false;
         public Transform[] waypointArray;
         public GameOver gameOverRef;
+        public bool shouldDetectPlayer = true;
 
         string reasonOfDeath;
         Queue<Transform> waypoints;
@@ -75,11 +76,14 @@ namespace CultGame.Enemy
         /// </summary>
         private void CheckPlayerDetection()
         {
-            distanceFromPlayer = Vector3.Distance(player.position, transform.position);
-            if (distanceFromPlayer <= detectionRadius)
+            if(shouldDetectPlayer)
             {
-                reasonOfDeath = "You were detected".ToUpper();
-                hasDetected = true;
+                distanceFromPlayer = Vector3.Distance(player.position, transform.position);
+                if (distanceFromPlayer <= detectionRadius)
+                {
+                    reasonOfDeath = "You were detected".ToUpper();
+                    hasDetected = true;
+                }
             }
         }
 
