@@ -305,9 +305,11 @@ GameObject:
   - component: {fileID: 405037658286800280}
   - component: {fileID: 405037658286800281}
   - component: {fileID: 405037658286800286}
+  - component: {fileID: 4450217867075945653}
+  - component: {fileID: 8879944565463813473}
   m_Layer: 0
   m_Name: Cultist_F
-  m_TagString: Follow
+  m_TagString: Relax
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -389,6 +391,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  gameOverRef: {fileID: 0}
 --- !u!82 &405037658286800286
 AudioSource:
   m_ObjectHideFlags: 0
@@ -485,6 +488,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &4450217867075945653
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405037658286800284}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2.2981796
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.6490898, z: 0}
+--- !u!54 &8879944565463813473
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405037658286800284}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &424280934584406671
 GameObject:
   m_ObjectHideFlags: 0

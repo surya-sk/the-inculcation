@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,6 +24,7 @@ namespace CultGame.Enemy
         NavMeshAgent navMeshAgent;
         float distanceFromPlayer;
         Transform lastPoint;
+        readonly System.Random random = new System.Random();
 
 
         // Start is called before the first frame update
@@ -30,7 +32,6 @@ namespace CultGame.Enemy
         {
             navMeshAgent = GetComponent<NavMeshAgent>();
             animator = GetComponent<Animator>();
-
             switch(gameObject.tag)
             {
                 case "Follow":
@@ -40,6 +41,9 @@ namespace CultGame.Enemy
                     break;
                 case "Pray":
                     StartCoroutine(Pray());
+                    break;
+                case "Relax":
+                    StartCoroutine(Relax(random.Next(3)));
                     break;
             }
         }
@@ -113,7 +117,18 @@ namespace CultGame.Enemy
         IEnumerator Pray()
         {
             animator.SetTrigger("Pray");
-            while(gameObject.activeSelf)
+            while (gameObject.activeSelf)
+            {
+                CheckPlayerDetection();
+                yield return new WaitForSeconds(0.5f);
+            }
+        }
+
+        IEnumerator Relax(int index)
+        {
+            string[] triggers = { "Relax", "Relax1", "Relax2" };
+            animator.SetTrigger(triggers[index]);
+            while (gameObject.activeSelf)
             {
                 CheckPlayerDetection();
                 yield return new WaitForSeconds(0.5f);
