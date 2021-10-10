@@ -1902,11 +1902,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5794594375448414460, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000003511139
+      value: 0.00000003511139
       objectReference: {fileID: 0}
     - target: {fileID: 5794594375448414460, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.000000005044141
+      value: -0.000000005044141
       objectReference: {fileID: 0}
     - target: {fileID: 5794594375448414460, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2016,11 +2016,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802312317756, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000012804834
+      value: -0.000000012804832
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802312317756, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000016030407
+      value: 0.0000000016030405
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802636613784, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2032,11 +2032,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802636613784, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000019041824
+      value: 0.000000019041822
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802636613784, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000027355689
+      value: -0.0000000027355687
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802643480863, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2373,8 +2373,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 37.53882, y: 13.739889, z: 61.353027}
-  m_Center: {x: 18.26941, y: -3.8656778, z: -4.9333496}
+  m_Size: {x: 37.53882, y: 13.739889, z: 136.50443}
+  m_Center: {x: 18.26941, y: -3.8656778, z: -1.6666526}
 --- !u!114 &1641642288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2395,13 +2395,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641642286}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2478.3, y: 0, z: 6916.4}
+  m_LocalRotation: {x: -0, y: 0.28410393, z: -0, w: 0.9587935}
+  m_LocalPosition: {x: 2336.2, y: 0, z: 6948.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 33.011, z: 0}
 --- !u!114 &2064404614 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6069151579058741471, guid: e1b1f2d3478cc27469127f8beb98f8bf, type: 3}
@@ -2471,7 +2471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8892b3b734f5e049a0ca6aa8f8becc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectiveString: Drive to the last known location
+  objectiveString: Get back in the car and keep driving
   objectiveText: {fileID: 1203943745}
   nextObjective: {fileID: 51379297}
   firstObjective: {fileID: 101783679}
