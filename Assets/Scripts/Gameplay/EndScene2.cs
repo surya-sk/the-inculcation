@@ -3,26 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EndScene2 : MonoBehaviour
+namespace CultGame.Gameplay
 {
-    public AudioSource hitSound;
-    private void OnTriggerEnter(Collider other)
+    public class EndScene2 : MonoBehaviour
     {
-        if(other.gameObject.tag == "Player")
+        public AudioSource hitSound;
+        private void OnTriggerEnter(Collider other)
         {
-            StartCoroutine(SimulateHit());
+            if (other.gameObject.tag == "Player")
+            {
+                StartCoroutine(SimulateHit());
+            }
         }
-    }
 
-    IEnumerator SimulateHit()
-    {
-        while(gameObject.activeSelf)
+        IEnumerator SimulateHit()
         {
-            // TODO: Switch to first person here
-            yield return new WaitForSeconds(3f);
-            hitSound.Play();
-            yield return new WaitForSeconds(1f);
-            SceneManager.LoadScene(4);
+            while (gameObject.activeSelf)
+            {
+                // TODO: Switch to first person here
+                yield return new WaitForSeconds(3f);
+                hitSound.Play();
+                yield return new WaitForSeconds(1f);
+                SceneManager.LoadScene(4);
+            }
         }
     }
 }
