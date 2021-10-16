@@ -631,11 +631,11 @@ MonoBehaviour:
   - Story
   - A Game By
   artists:
-  - Surya Kashyap
-  - Surya Kashyap
-  - Drkblu
-  - Surya Kashyap
-  - Surya Kashyap
+  - Me
+  - 'Me '
+  - Not me
+  - Preferrably not me
+  - Me
   title: {fileID: 941889897}
   timeBetweenCredits: 3
   sceneLoader: {fileID: 551932004}

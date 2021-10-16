@@ -25,15 +25,28 @@ namespace CultGame.Utils
 
         public void StartGame()
         {
-            //if (File.Exists(Path.Combine(Application.persistentDataPath, "Chapter 3.sav")))
-            //{
-            //}
-            //else if (File.Exists(Path.Combine(Application.persistentDataPath, "Chapter 2.sav")))
-            //{
-            //}
-            //else
-            //{
-            //}
+            string[] fileNames = Directory.GetFiles(Application.persistentDataPath, "*.sav");
+            print(fileNames[0] + fileNames[1]);
+            int len = fileNames.Length;
+            if(len > 0)
+            {
+                switch(Path.GetFileName(fileNames[len - 1]))
+                {
+                    case "Scene3.sav":
+                        LoadScene(5);
+                        break;
+                    case "Scene2.sav":
+                        LoadScene(4);
+                        break;
+                    case "Scene1":
+                        LoadScene(2);
+                        break;
+                }
+            }
+            else
+            {
+                LoadScene(1);
+            }
         }
 
         public void RestartGame()
