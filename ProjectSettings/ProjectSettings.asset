@@ -615,11 +615,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: TemplateHD
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: 
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 808363afbee1d801
   metroApplicationDescription: Template_HD
   wsaImages: {}
   metroTileShortName: cult-game

@@ -310,26 +310,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8161125754294752816, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
       propertyPath: m_text
-      value: "From: gwen.smith76@outlook.com\nTo: david.smith450@outlook.com\n\nSubject:
-        URGENT - Your father is missing\n\nDear Dave,\n\nYour father hasn't returned
+      value: "From: glen.smith76@outlook.com\nTo: david.smith450@outlook.com\n\nSubject:
+        URGENT - Your father is missing\n\nDear Dave,\n\nYour mother hasn't returned
         home after his retirement party three days ago. I know you're usually busy
         but I'm writing to you because I'm very worried. Please read this email and
-        search for him. I've already informed the cops, but none of them seem to
-        acting immediately. \n\nYour father left home on Friday to hang out with
-        his old bandmates, to celebrate his retirement. I've sent you his last known
-        location via SMS. It is near the cabin he used to jam at. So please have
-        a look in the cabin and see if he's there. If he isn't, go to his last known
-        location and look for him. I know you don't have the best relationship with
-        him, but I'm worried sick and would like you try and find him.\n\nGood luck
-        and be careful,\nMom."
+        search for her. I've already informed the cops, but none of them seem to
+        acting immediately. \n\nYour home left home on Friday to hang out with her
+        friends, to celebrate her retirement. I've sent you her last known location
+        via SMS. It is near the cabin she used to work at. So please have a look
+        in the cabin and see if she's there. If he isn't, go to her last known location
+        and look for her. I know you don't have the best relationship with her, but
+        I'm worried sick and would like you try and find her.\n\nGood luck and be
+        careful,\nDad."
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161125754294752816, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
+      propertyPath: m_fontSize
+      value: 30.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161125754294752816, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
+      propertyPath: m_margin.w
+      value: -408.67145
       objectReference: {fileID: 0}
     - target: {fileID: 8161125754294752816, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
       propertyPath: m_margin.x
       value: -763.69025
       objectReference: {fileID: 0}
     - target: {fileID: 8161125754294752816, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
+      propertyPath: m_margin.y
+      value: -418.01846
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161125754294752816, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
       propertyPath: m_margin.z
       value: -773.1166
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161125754294752816, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 8161125754294752817, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -21
       objectReference: {fileID: 0}
     - target: {fileID: 8161125754665653202, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
       propertyPath: m_SizeDelta.x
@@ -337,7 +357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8161125754665653202, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 705.26
+      value: 1102.0513
       objectReference: {fileID: 0}
     - target: {fileID: 8161125754665653202, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -345,7 +365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8161125754665653202, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00077057
+      value: -6.9367
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f95bd4323479de458772e4a8baea520, type: 3}
@@ -775,7 +795,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -835,7 +855,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 596, y: -240}
+  m_AnchoredPosition: {x: 596, y: -356}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &2138262599 stripped

@@ -26,7 +26,6 @@ namespace CultGame.Utils
         public void StartGame()
         {
             string[] fileNames = Directory.GetFiles(Application.persistentDataPath, "*.sav");
-            print(fileNames[0] + fileNames[1]);
             int len = fileNames.Length;
             if(len > 0)
             {
