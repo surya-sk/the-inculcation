@@ -33,7 +33,7 @@ namespace CultGame.Gameplay
         public void RestoreState(object state)
         {
             activated = (bool)state;
-            DecideTerrainStatus();
+            StartCoroutine(DecideTerrainStatus());
         }
     }
 }
