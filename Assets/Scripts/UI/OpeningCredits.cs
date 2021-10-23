@@ -35,7 +35,7 @@ namespace CultGame.UI
             personText.enabled = false;
             title.enabled = true;
             yield return new WaitForSeconds(timeBetweenCredits);
-            sceneLoader.LoadScene(3);
+            sceneLoader.LoadScene(4);
         }
     }
 }

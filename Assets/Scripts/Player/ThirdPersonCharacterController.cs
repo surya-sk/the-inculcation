@@ -57,16 +57,12 @@ namespace CultGame.Player
                 isCrouched = !isCrouched;
             }
 
-            if(UnityEngine.Input.GetKey(KeyCode.LeftShift) && !isCrouched)
+            if(UnityEngine.Input.GetKey(KeyCode.LeftShift) || UnityEngine.Input.GetKey(KeyCode.JoystickButton8))
             {
-                animator.SetBool("Run", true);
-                playerSpeed = runSpeed;
                 isRunning = true;
             }
             else
             {
-                animator.SetBool("Run", false);
-                playerSpeed = walkSpeed;
                 isRunning = false;
             }
 
@@ -89,6 +85,8 @@ namespace CultGame.Player
             {
                 if(isRunning)
                 {
+                    animator.SetBool("Run", true);
+                    playerSpeed = runSpeed;
                     walkSound.Stop();
                     if (!runSound.isPlaying)
                     {
@@ -97,6 +95,8 @@ namespace CultGame.Player
                 }
                 else
                 {
+                    animator.SetBool("Run", false);
+                    playerSpeed = walkSpeed;
                     runSound.Stop();
                     if (!walkSound.isPlaying)
                     {

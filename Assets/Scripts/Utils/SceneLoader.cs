@@ -37,7 +37,7 @@ namespace CultGame.Utils
                     case "Scene2.sav":
                         LoadScene(4);
                         break;
-                    case "Scene1":
+                    case "Scene1.sav":
                         LoadScene(2);
                         break;
                 }

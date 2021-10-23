@@ -688,7 +688,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4858819891837381379, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
       propertyPath: motorForce
-      value: 500
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4858819891837381379, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
+      propertyPath: maxSteerAngle
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4863666238342314435, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
       propertyPath: m_RootOrder
@@ -1658,7 +1662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b715186bcac1bd64f90ad7deef14d4e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 2
+  sceneNumber: 3
   sceneLoader: {fileID: 242476280}
 --- !u!1001 &1161361544
 PrefabInstance:
@@ -2016,11 +2020,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802312317756, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000012804834
+      value: -0.000000012804832
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802312317756, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000016030407
+      value: 0.0000000016030405
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802636613784, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2562,6 +2566,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1215964875, guid: 708740d3c95453f43808b02c078f2dec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 242476280}
+    - target: {fileID: 1215964875, guid: 708740d3c95453f43808b02c078f2dec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407501148, guid: 708740d3c95453f43808b02c078f2dec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 242476280}
+    - target: {fileID: 1407501148, guid: 708740d3c95453f43808b02c078f2dec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
     - target: {fileID: 2005911224, guid: 708740d3c95453f43808b02c078f2dec, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -24,20 +24,17 @@ namespace CultGame.Car
 
         private void Update()
         {
-            if (carHintCanvas.enabled)
+            if (UnityEngine.Input.GetKeyDown(KeyCode.Y) || UnityEngine.Input.GetKeyDown(KeyCode.JoystickButton3))
             {
-                if (UnityEngine.Input.GetKeyDown(KeyCode.Y) || UnityEngine.Input.GetKeyDown(KeyCode.JoystickButton3))
-                {
-                    isDriving = true;
-                }
-            }
-            if(nextObjectiveToExitCar.GetComponent<BoxCollider>().enabled)
-            {
-                canGetOut = true;
+                isDriving = !isDriving;
             }
             if(isDriving)
             {
                 ActivateDriving();
+            }
+            else
+            {
+                DeactivateDriving();
             }
         }
 
@@ -50,13 +47,6 @@ namespace CultGame.Car
             carHintCanvas.enabled = false;
             GetComponent<CarController>().enabled = true;
             engineStartSound.Play();
-            if(canGetOut)
-            {
-                if (UnityEngine.Input.GetKeyDown(KeyCode.Y) || UnityEngine.Input.GetKeyDown(KeyCode.JoystickButton3))
-                {
-                    DeactivateDriving();
-                }
-            }
         }
 
         private void DeactivateDriving()
