@@ -8,6 +8,8 @@ namespace CultGame.Gameplay
     public class TerrainHandler : MonoBehaviour, ISaveable
     {
         public GameObject terrain;
+        public int index;
+        public TerrainManager terrainManager;
         bool activated = false;
 
         private void OnTriggerEnter(Collider other)
@@ -15,6 +17,10 @@ namespace CultGame.Gameplay
             if(other.gameObject.tag == "Player")
             {
                 activated = !terrain.activeSelf;
+                if(activated)
+                {
+                    terrainManager.SetActiveTerrain(index);
+                }
                 StartCoroutine(DecideTerrainStatus());
             }
         }
