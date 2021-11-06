@@ -79,7 +79,6 @@ namespace CultGame.Enemy
             if(shouldDetectPlayer)
             {
                 distanceFromPlayer = Vector3.Distance(player.position, transform.position);
-                Debug.Log(player.position);
                 if (distanceFromPlayer <= detectionRadius)
                 {
                     reasonOfDeath = "You were detected".ToUpper();
