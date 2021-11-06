@@ -15,8 +15,12 @@ namespace CultGame.Gameplay
 
         public void SetActiveTerrain(int index)
         {
-            print(index);
             currentTerrainIndex = index;
+        }
+        
+        public int GetActiveTerrain()
+        {
+            return currentTerrainIndex;
         }
 
         private void DeactivateOtherTerrains()
