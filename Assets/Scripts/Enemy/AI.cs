@@ -37,7 +37,7 @@ namespace CultGame.Enemy
             {
                 case "Follow":
                     InitWaypointQueue();
-                    player.GetComponent<ThirdPersonCharacterController>().playerSpeed = 3.0f;
+                    player.GetComponent<ThirdPersonCharacterController>().playerSpeed = 2.0f;
                     StartCoroutine(FollowWaypoint());
                     break;
                 case "Pray":
