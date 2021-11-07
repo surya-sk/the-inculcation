@@ -46,6 +46,10 @@ namespace CultGame.Enemy
                 case "Relax":
                     StartCoroutine(Relax(random.Next(0,2)));
                     break;
+                case "Float":
+                    StartCoroutine(Float());
+                    break;
+                    
             }
         }
 
@@ -135,6 +139,19 @@ namespace CultGame.Enemy
             while (gameObject.activeSelf)
             {
                 CheckPlayerDetection();
+                yield return new WaitForSeconds(0.5f);
+            }
+        }
+
+        IEnumerator Float()
+        {
+            animator.SetTrigger("Float");
+            transform.position = new Vector3(transform.position.x, 4, transform.position.z);
+            while(gameObject.activeSelf)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
+                yield return new WaitForSeconds(0.5f);
+                transform.position = new Vector3(transform.position.x, transform.position.y - 0.2f, transform.position.z);
                 yield return new WaitForSeconds(0.5f);
             }
         }
