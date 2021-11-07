@@ -13,11 +13,9 @@ namespace CultGame.Player
         public float walkSpeed = 4.0f;
         public float runSpeed = 10.0f;
         public float rotationSpeed = 8.0f;
-        public GameObject lantern;
         public AudioSource walkSound;
         public AudioSource runSound;
         public RuntimeAnimatorController defaultAnimController;
-        public RuntimeAnimatorController lanternAnimController;
         public RuntimeAnimatorController crouchAnimController;
 
         // bad idea to mess with this
@@ -36,7 +34,6 @@ namespace CultGame.Player
             controller = GetComponent<CharacterController>();
             animator = GetComponent<Animator>();
             playerSpeed = walkSpeed;
-            lantern.SetActive(false);
             isCrouched = false;
             isRunning = false;
         }
@@ -138,12 +135,6 @@ namespace CultGame.Player
         {
             inputDirection = Vector2.zero;
             animator.SetBool("Walk", false);
-        }
-
-        public void ActivateLantern()
-        {
-            lantern.SetActive(true);
-            animator.runtimeAnimatorController = lanternAnimController;
         }
 
         public object CaptureState()
