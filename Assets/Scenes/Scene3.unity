@@ -117,7 +117,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    accuratePlacement: 1
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -613,11 +613,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802312317756, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.016224286
+      value: 0.016224321
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802312317756, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0018775937
+      value: 0.0018775979
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802636613784, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.w
