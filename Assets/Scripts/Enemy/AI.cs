@@ -115,19 +115,25 @@ namespace CultGame.Enemy
                     destinationReached = true;
                 }
 
-                CheckPlayerDetection();
+                if(shouldDetectPlayer)
+                    CheckPlayerDetection();
 
                 yield return new WaitForSeconds(0.5f);
             }
 
         }
 
+        /// <summary>
+        /// Coroutine to have enemies pray
+        /// </summary>
+        /// <returns></returns>
         IEnumerator Pray()
         {
             animator.SetTrigger("Pray");
             while (gameObject.activeSelf)
             {
-                CheckPlayerDetection();
+                if(shouldDetectPlayer)
+                    CheckPlayerDetection();
                 yield return new WaitForSeconds(0.5f);
             }
         }
@@ -138,7 +144,8 @@ namespace CultGame.Enemy
             animator.SetTrigger(triggers[index]);
             while (gameObject.activeSelf)
             {
-                CheckPlayerDetection();
+                if(shouldDetectPlayer)
+                    CheckPlayerDetection();
                 yield return new WaitForSeconds(0.5f);
             }
         }
