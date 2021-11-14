@@ -49,7 +49,9 @@ namespace CultGame.Enemy
                 case "Float":
                     StartCoroutine(Float());
                     break;
-                    
+                case "Stand":
+                    animator.SetTrigger("Stand");
+                    break;
             }
         }
 
