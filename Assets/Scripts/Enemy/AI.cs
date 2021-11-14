@@ -52,6 +52,15 @@ namespace CultGame.Enemy
                 case "Stand":
                     animator.SetTrigger("Stand");
                     break;
+                case "Laugh":
+                    animator.SetTrigger("Laugh");
+                    break;
+                case "Dance":
+                    animator.SetTrigger("Dance");
+                    break;
+                case "Piano":
+                    animator.SetTrigger("Piano");
+                    break;
             }
         }
 

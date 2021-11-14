@@ -9,6 +9,9 @@ TagManager:
   - Relax
   - Float
   - Stand
+  - Laugh
+  - Piano
+  - Dance
   layers:
   - Default
   - TransparentFX
