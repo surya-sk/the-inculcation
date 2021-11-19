@@ -6,6 +6,7 @@ using UnityEngine.AI;
 using CultGame.Utils;
 using CultGame.Player;
 using CultGame.Saving;
+using CultGame.Gameplay;
 
 namespace CultGame.Enemy
 {
@@ -13,12 +14,17 @@ namespace CultGame.Enemy
     {
         public Transform player;
         public AudioSource walkSound;
+        public AudioSource RunSound;
         public float detectionRadius = 15f;
         public bool hasDetected = false;
         public Transform[] waypointArray;
         public GameOver gameOverRef;
         public bool shouldDetectPlayer = true;
+        public float RunSpeed;
+        public Transform WatchPoint;
+        public ChaseTrigger ChaseTrigger;
 
+        private bool m_ChaseStarted = false;
         string reasonOfDeath;
         Queue<Transform> waypoints;
         Animator animator;
@@ -84,6 +90,15 @@ namespace CultGame.Enemy
             {
                 gameOverRef.EndGame(reasonOfDeath);
             }
+
+            if(ChaseTrigger != null)
+            {
+                if(ChaseTrigger.PlayerHasCrossed && !m_ChaseStarted)
+                {
+                    StopAllCoroutines();
+                    StartCoroutine(ChasePlayer());
+                }
+            }
         }
 
         /// <summary>
@@ -99,6 +114,35 @@ namespace CultGame.Enemy
                     reasonOfDeath = "You were detected".ToUpper();
                     hasDetected = true;
                 }
+            }
+        }
+
+        IEnumerator ChasePlayer()
+        {
+            m_ChaseStarted = true;
+            while(gameObject.activeSelf)
+            {
+                distanceFromPlayer = Vector3.Distance(player.position, transform.position);
+                if (distanceFromPlayer <= detectionRadius)
+                {
+                    navMeshAgent.speed = RunSpeed;
+                    Run(player.position);
+                }
+                else
+                {
+                    navMeshAgent.speed = 3.0f;
+                    detectionRadius = 10;
+                    Vector3 randomLocation = new Vector3(WatchPoint.position.x + GetRandomFloat(), WatchPoint.position.y, WatchPoint.position.z + GetRandomFloat());
+                    if(Vector3.Distance(randomLocation, transform.position) < 2.0)
+                    {
+                        Move(WatchPoint.position);
+                    }
+                    else
+                    {
+                        Move(randomLocation);
+                    }
+                }
+                yield return new WaitForSeconds(0.5f);
             }
         }
 
@@ -186,6 +230,27 @@ namespace CultGame.Enemy
             {
                 walkSound.Play();
             }
+        }
+
+        /// <summary>
+        /// Move the enemy to the given destination
+        /// </summary>
+        /// <param name="destination"></param>
+        private void Run(Vector3 destination)
+        {
+            animator.SetTrigger("Run");
+            navMeshAgent.SetDestination(destination);
+            if (!walkSound.isPlaying)
+            {
+                walkSound.Play();
+            }
+        }
+
+        private float GetRandomFloat()
+        {
+            System.Random random = new System.Random();
+            double val = (random.NextDouble() * (20 - 2) + 2);
+            return (float)val;
         }
 
         public object CaptureState()
