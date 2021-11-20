@@ -70,6 +70,14 @@ namespace CultGame.Enemy
             }
         }
 
+        private void OnTriggerEnter(Collider other)
+        {
+            if(other.gameObject.tag == "Player")
+            {
+                animator.SetTrigger("Stab");
+            }
+        }
+
         /// <summary>
         /// Adds waypoints to the queue for convinience
         /// </summary>
