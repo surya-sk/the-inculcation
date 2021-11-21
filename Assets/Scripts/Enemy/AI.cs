@@ -128,7 +128,8 @@ namespace CultGame.Enemy
         IEnumerator ChasePlayer()
         {
             m_ChaseStarted = true;
-            while(gameObject.activeSelf)
+            Vector3 randomLocation = new Vector3(WatchPoint.position.x + GetRandomFloat(), WatchPoint.position.y, WatchPoint.position.z + GetRandomFloat());
+            while (gameObject.activeSelf)
             {
                 distanceFromPlayer = Vector3.Distance(player.position, transform.position);
                 if (distanceFromPlayer <= detectionRadius)
@@ -140,15 +141,11 @@ namespace CultGame.Enemy
                 {
                     navMeshAgent.speed = 3.0f;
                     detectionRadius = 10;
-                    Vector3 randomLocation = new Vector3(WatchPoint.position.x + GetRandomFloat(), WatchPoint.position.y, WatchPoint.position.z + GetRandomFloat());
-                    if(Vector3.Distance(randomLocation, transform.position) < 2.0)
+                    if(Vector3.Distance(randomLocation, transform.position) < 3.0)
                     {
-                        Move(WatchPoint.position);
+                        new Vector3(WatchPoint.position.x + GetRandomFloat(), WatchPoint.position.y, WatchPoint.position.z + GetRandomFloat());
                     }
-                    else
-                    {
-                        Move(randomLocation);
-                    }
+                    Move(randomLocation);
                 }
                 yield return new WaitForSeconds(0.5f);
             }
