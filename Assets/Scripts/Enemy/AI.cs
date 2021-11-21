@@ -23,6 +23,7 @@ namespace CultGame.Enemy
         public float RunSpeed;
         public Transform WatchPoint;
         public ChaseTrigger ChaseTrigger;
+        public Transform WaitingPoint;
 
         private bool m_ChaseStarted = false;
         string reasonOfDeath;
@@ -103,8 +104,15 @@ namespace CultGame.Enemy
             {
                 if(ChaseTrigger.PlayerHasCrossed && !m_ChaseStarted)
                 {
-                    StopAllCoroutines();
-                    StartCoroutine(ChasePlayer());
+                    if(gameObject.tag == "Sister")
+                    {
+                        navMeshAgent.SetDestination(WaitingPoint.position);
+                    }
+                    else
+                    {
+                        StopAllCoroutines();
+                        StartCoroutine(ChasePlayer());
+                    }
                 }
             }
         }

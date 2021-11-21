@@ -274,7 +274,11 @@ PrefabInstance:
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: ChaseTrigger
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 900879379}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: WaitingPoint
+      value: 
+      objectReference: {fileID: 194490685}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: shouldDetectPlayer
       value: 0
@@ -360,6 +364,36 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.4168024
   m_Center: {x: -0.0000000014084458, y: 0.49303877, z: 0.044851426}
+--- !u!1 &194490684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 194490685}
+  m_Layer: 0
+  m_Name: Waiting Spot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &194490685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194490684}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 135.48, y: 6.316, z: 147.18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &222421252
 GameObject:
   m_ObjectHideFlags: 0
