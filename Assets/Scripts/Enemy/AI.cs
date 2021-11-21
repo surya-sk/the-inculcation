@@ -234,6 +234,7 @@ namespace CultGame.Enemy
         {
             animator.SetTrigger("Move");
             navMeshAgent.SetDestination(destination);
+            RunSound.Stop();
             if(!walkSound.isPlaying)
             {
                 walkSound.Play();
@@ -248,9 +249,10 @@ namespace CultGame.Enemy
         {
             animator.SetTrigger("Run");
             navMeshAgent.SetDestination(destination);
-            if (!walkSound.isPlaying)
+            walkSound.Stop();
+            if (!RunSound.isPlaying)
             {
-                walkSound.Play();
+                RunSound.Play();
             }
         }
 
