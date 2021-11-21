@@ -380,7 +380,6 @@ GameObject:
   m_Component:
   - component: {fileID: 237905492}
   - component: {fileID: 237905495}
-  - component: {fileID: 237905494}
   - component: {fileID: 237905493}
   m_Layer: 0
   m_Name: First Person Camera
@@ -517,14 +516,6 @@ MonoBehaviour:
       data1: 0
       data2: 0
   defaultFrameSettings: 0
---- !u!81 &237905494
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 237905491}
-  m_Enabled: 1
 --- !u!20 &237905495
 Camera:
   m_ObjectHideFlags: 0
@@ -977,6 +968,14 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 903507688, guid: 4a25fbd08f5a7d74591ad90bb2d9d6ec, type: 3}
   m_PrefabInstance: {fileID: 1686058449}
   m_PrefabAsset: {fileID: 0}
+--- !u!81 &510544867
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510544859}
+  m_Enabled: 1
 --- !u!1001 &515318681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1093,7 +1092,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5794594375448414462, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
 --- !u!1 &540851059 stripped
 GameObject:
@@ -1841,6 +1841,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1431589173, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: MaxDistance
+      value: 500.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431589173, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: DopplerLevel
+      value: 0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431589173, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0.175
+      objectReference: {fileID: 0}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: player
       value: 
