@@ -140,6 +140,10 @@ namespace CultGame.Enemy
             while (gameObject.activeSelf)
             {
                 distanceFromPlayer = Vector3.Distance(player.position, transform.position);
+                if (distanceFromPlayer <= 2.0f)
+                {
+                    Debug.Log("Found");
+                }
                 if (distanceFromPlayer <= detectionRadius)
                 {
                     navMeshAgent.speed = RunSpeed;
