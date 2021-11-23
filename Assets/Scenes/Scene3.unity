@@ -208,6 +208,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 634505645}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: gameOverRef
+      value: 
+      objectReference: {fileID: 20182372}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: ChaseTrigger
       value: 
       objectReference: {fileID: 900879379}
@@ -890,6 +894,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 643266954}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: gameOverRef
+      value: 
+      objectReference: {fileID: 20182372}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: ChaseTrigger
       value: 
       objectReference: {fileID: 900879379}
@@ -1036,11 +1044,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802312317756, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.016224286
+      value: 0.016224321
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802312317756, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0018775937
+      value: 0.0018775979
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802636613784, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1600,6 +1608,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 508881430}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: gameOverRef
+      value: 
+      objectReference: {fileID: 20182372}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: ChaseTrigger
       value: 
       objectReference: {fileID: 900879379}
@@ -1709,6 +1721,10 @@ PrefabInstance:
       propertyPath: WatchPoint
       value: 
       objectReference: {fileID: 702986742}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: gameOverRef
+      value: 
+      objectReference: {fileID: 20182372}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: ChaseTrigger
       value: 
@@ -2150,6 +2166,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 967496689}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: gameOverRef
+      value: 
+      objectReference: {fileID: 20182372}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: ChaseTrigger
       value: 
       objectReference: {fileID: 900879379}
@@ -2254,6 +2274,10 @@ PrefabInstance:
       propertyPath: WatchPoint
       value: 
       objectReference: {fileID: 278151268}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: gameOverRef
+      value: 
+      objectReference: {fileID: 20182372}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: ChaseTrigger
       value: 
@@ -2432,6 +2456,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 222421253}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: gameOverRef
+      value: 
+      objectReference: {fileID: 20182372}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: ChaseTrigger
       value: 
       objectReference: {fileID: 900879379}
@@ -2541,6 +2569,10 @@ PrefabInstance:
       propertyPath: WatchPoint
       value: 
       objectReference: {fileID: 878288876}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: gameOverRef
+      value: 
+      objectReference: {fileID: 20182372}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: ChaseTrigger
       value: 
@@ -2811,6 +2843,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 684734614}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: gameOverRef
+      value: 
+      objectReference: {fileID: 20182372}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: ChaseTrigger
       value: 
       objectReference: {fileID: 900879379}
@@ -3070,6 +3106,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1360180511}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: gameOverRef
+      value: 
+      objectReference: {fileID: 20182372}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: ChaseTrigger
       value: 
       objectReference: {fileID: 900879379}
@@ -3243,6 +3283,10 @@ PrefabInstance:
       propertyPath: WatchPoint
       value: 
       objectReference: {fileID: 1360180511}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: gameOverRef
+      value: 
+      objectReference: {fileID: 20182372}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: ChaseTrigger
       value: 
@@ -3844,6 +3888,10 @@ PrefabInstance:
       propertyPath: WatchPoint
       value: 
       objectReference: {fileID: 702986742}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: gameOverRef
+      value: 
+      objectReference: {fileID: 20182372}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: ChaseTrigger
       value: 
