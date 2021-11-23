@@ -55,13 +55,14 @@ namespace CultGame.Utils
         }
 
 
-        public void LoadScene(int index)
+        public void LoadScene(int index, float waitTime = 0.0f)
         {
-            StartCoroutine(LoadAsync(index));
+            StartCoroutine(LoadAsync(index, waitTime));
         }
 
-        IEnumerator LoadAsync(int sceneIndex)
+        IEnumerator LoadAsync(int sceneIndex, float waitTime)
         {
+            yield return new WaitForSeconds(waitTime);
             AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
             if (operation.progress < 1.0)
             {

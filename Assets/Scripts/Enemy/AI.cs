@@ -26,6 +26,7 @@ namespace CultGame.Enemy
         public Transform WaitingPoint;
         public GameObject CameraMonitor;
         public SceneLoader SceneLoader;
+        public Canvas BlackCanvas;
 
         private bool m_ChaseStarted = false;
         private bool m_StabPlayer = false;
@@ -102,7 +103,8 @@ namespace CultGame.Enemy
             {
                 DisablePlayerMovement();
                 animator.SetTrigger("Stab");
-                SceneLoader.LoadScene(7);
+                // PLAY PLAYER FALLING ANIM
+                SceneLoader.LoadScene(7, 2.0f);
             }
 
             if(hasDetected)
@@ -159,6 +161,8 @@ namespace CultGame.Enemy
                     navMeshAgent.speed = 0;
                     animator.SetTrigger("Stand");
                     animator.SetTrigger("Punch");
+                    yield return new WaitForSeconds(1.0f);
+                    BlackCanvas.enabled = true;
                 }
                 if (distanceFromPlayer <= detectionRadius)
                 {
