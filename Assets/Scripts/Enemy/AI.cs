@@ -25,8 +25,10 @@ namespace CultGame.Enemy
         public ChaseTrigger ChaseTrigger;
         public Transform WaitingPoint;
         public GameObject CameraMonitor;
+        public SceneLoader SceneLoader;
 
         private bool m_ChaseStarted = false;
+        private bool m_StabPlayer = false;
         string reasonOfDeath;
         Queue<Transform> waypoints;
         Animator animator;
@@ -76,7 +78,7 @@ namespace CultGame.Enemy
         {
             if(other.gameObject.tag == "Player")
             {
-                animator.SetTrigger("Stab");
+                m_StabPlayer = true;
             }
         }
 
@@ -96,6 +98,13 @@ namespace CultGame.Enemy
         // Update is called once per frame
         void Update()
         {
+            if(m_StabPlayer)
+            {
+                DisablePlayerMovement();
+                animator.SetTrigger("Stab");
+                SceneLoader.LoadScene(7);
+            }
+
             if(hasDetected)
             {
                 gameOverRef.EndGame(reasonOfDeath);
@@ -144,10 +153,9 @@ namespace CultGame.Enemy
                 if (distanceFromPlayer <= navMeshAgent.stoppingDistance)
                 {
                     reasonOfDeath = "You were caught".ToUpper();
-                    CameraMonitor.GetComponent<CameraSwitcher>().enabled = false;
-                    hasDetected = true;
-                    player.GetComponent<ThirdPersonCharacterController>().enabled = false;
                     StopAllCoroutines();
+                    hasDetected = true;
+                    DisablePlayerMovement();
                     navMeshAgent.speed = 0;
                     animator.SetTrigger("Stand");
                     animator.SetTrigger("Punch");
@@ -169,6 +177,12 @@ namespace CultGame.Enemy
                 }
                 yield return new WaitForSeconds(0.5f);
             }
+        }
+
+        private void DisablePlayerMovement()
+        {
+            CameraMonitor.GetComponent<CameraSwitcher>().enabled = false;
+            player.GetComponent<ThirdPersonCharacterController>().enabled = false;
         }
 
         /// <summary>
