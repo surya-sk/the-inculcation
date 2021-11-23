@@ -24,6 +24,7 @@ namespace CultGame.Enemy
         public Transform WatchPoint;
         public ChaseTrigger ChaseTrigger;
         public Transform WaitingPoint;
+        public GameObject CameraMonitor;
 
         private bool m_ChaseStarted = false;
         string reasonOfDeath;
@@ -140,9 +141,16 @@ namespace CultGame.Enemy
             while (gameObject.activeSelf)
             {
                 distanceFromPlayer = Vector3.Distance(player.position, transform.position);
-                if (distanceFromPlayer <= 2.0f)
+                if (distanceFromPlayer <= navMeshAgent.stoppingDistance)
                 {
-                    Debug.Log("Found");
+                    reasonOfDeath = "You were caught".ToUpper();
+                    CameraMonitor.GetComponent<CameraSwitcher>().enabled = false;
+                    hasDetected = true;
+                    player.GetComponent<ThirdPersonCharacterController>().enabled = false;
+                    StopAllCoroutines();
+                    navMeshAgent.speed = 0;
+                    animator.SetTrigger("Stand");
+                    animator.SetTrigger("Punch");
                 }
                 if (distanceFromPlayer <= detectionRadius)
                 {

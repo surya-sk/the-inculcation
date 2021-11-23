@@ -216,6 +216,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 900879379}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: CameraMonitor
+      value: 
+      objectReference: {fileID: 1868597280}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: shouldDetectPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -331,6 +335,10 @@ PrefabInstance:
       propertyPath: WaitingPoint
       value: 
       objectReference: {fileID: 194490685}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: CameraMonitor
+      value: 
+      objectReference: {fileID: 1868597280}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: shouldDetectPlayer
       value: 0
@@ -902,12 +910,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 900879379}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: CameraMonitor
+      value: 
+      objectReference: {fileID: 1868597280}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: shouldDetectPlayer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 405037658286800284, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: m_Name
       value: Laughing Cultist
+      objectReference: {fileID: 0}
+    - target: {fileID: 405037658286800284, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 405037658286800284, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: m_TagString
@@ -1044,11 +1060,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802312317756, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.016224321
+      value: 0.016224286
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802312317756, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0018775979
+      value: 0.0018775937
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802636613784, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1616,6 +1632,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 900879379}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: CameraMonitor
+      value: 
+      objectReference: {fileID: 1868597280}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: shouldDetectPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -1729,6 +1749,10 @@ PrefabInstance:
       propertyPath: ChaseTrigger
       value: 
       objectReference: {fileID: 900879379}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: CameraMonitor
+      value: 
+      objectReference: {fileID: 1868597280}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: shouldDetectPlayer
       value: 0
@@ -2174,6 +2198,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 900879379}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: CameraMonitor
+      value: 
+      objectReference: {fileID: 1868597280}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: shouldDetectPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -2282,6 +2310,10 @@ PrefabInstance:
       propertyPath: ChaseTrigger
       value: 
       objectReference: {fileID: 900879379}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: CameraMonitor
+      value: 
+      objectReference: {fileID: 1868597280}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: shouldDetectPlayer
       value: 0
@@ -2464,6 +2496,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 900879379}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: CameraMonitor
+      value: 
+      objectReference: {fileID: 1868597280}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: shouldDetectPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -2577,6 +2613,10 @@ PrefabInstance:
       propertyPath: ChaseTrigger
       value: 
       objectReference: {fileID: 900879379}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: CameraMonitor
+      value: 
+      objectReference: {fileID: 1868597280}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: shouldDetectPlayer
       value: 0
@@ -2851,6 +2891,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 900879379}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: CameraMonitor
+      value: 
+      objectReference: {fileID: 1868597280}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: shouldDetectPlayer
       value: 0
       objectReference: {fileID: 0}
@@ -3113,9 +3157,17 @@ PrefabInstance:
       propertyPath: ChaseTrigger
       value: 
       objectReference: {fileID: 900879379}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: CameraMonitor
+      value: 
+      objectReference: {fileID: 1868597280}
     - target: {fileID: 405037658286800284, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: m_Name
       value: Dancing Cultist
+      objectReference: {fileID: 0}
+    - target: {fileID: 405037658286800284, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 405037658286800286, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: m_Volume
@@ -3259,10 +3311,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1431589173, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
-      propertyPath: m_Volume
-      value: 0.293
-      objectReference: {fileID: 0}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: player
       value: 
@@ -3271,10 +3319,6 @@ PrefabInstance:
       propertyPath: RunSound
       value: 
       objectReference: {fileID: 407124416}
-    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
-      propertyPath: RunSpeed
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: walkSound
       value: 
@@ -3291,21 +3335,13 @@ PrefabInstance:
       propertyPath: ChaseTrigger
       value: 
       objectReference: {fileID: 900879379}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: CameraMonitor
+      value: 
+      objectReference: {fileID: 1868597280}
     - target: {fileID: 405037658286800284, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: m_Name
       value: Laughing Cultist (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 405037658286800284, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 405037658286800286, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
-      propertyPath: m_Volume
-      value: 0.295
-      objectReference: {fileID: 0}
-    - target: {fileID: 405037658286800286, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
-      propertyPath: MaxDistance
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1068807998377781030, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: m_RootOrder
@@ -3365,6 +3401,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7104830351210227270, guid: 4a25fbd08f5a7d74591ad90bb2d9d6ec, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7104830351210227273, guid: 4a25fbd08f5a7d74591ad90bb2d9d6ec, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -3896,6 +3936,10 @@ PrefabInstance:
       propertyPath: ChaseTrigger
       value: 
       objectReference: {fileID: 900879379}
+    - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
+      propertyPath: CameraMonitor
+      value: 
+      objectReference: {fileID: 1868597280}
     - target: {fileID: 405037658286800281, guid: 07f4bbf0febc39a4c84dde55266c7c61, type: 3}
       propertyPath: shouldDetectPlayer
       value: 0

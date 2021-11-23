@@ -81,7 +81,7 @@ namespace CultGame.Utils
 
         public void GameOver()
         {
-            SceneManager.LoadSceneAsync(5);
+            SceneManager.LoadSceneAsync(6);
         }
 
         public string GetSceneName()
