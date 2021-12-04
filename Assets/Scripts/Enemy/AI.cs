@@ -72,6 +72,9 @@ namespace CultGame.Enemy
                 case "Piano":
                     animator.SetTrigger("Piano");
                     break;
+                case "Sit":
+                    animator.SetTrigger("Sit");
+                    break;
             }
         }
 
