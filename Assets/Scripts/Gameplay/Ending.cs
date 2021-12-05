@@ -20,5 +20,10 @@ namespace CultGame.Gameplay
         {
             yield return null;
         }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            // Initiate jump
+        }
     }
 }
