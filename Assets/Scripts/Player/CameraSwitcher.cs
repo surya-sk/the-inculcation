@@ -11,15 +11,25 @@ namespace CultGame.Player
         public GameObject FirstPersonCamera;
         public GameObject Player;
         public int CameraMode;
+        public bool CanChange = true;
+
+        bool m_changed = false;
+
+        private void Start()
+        {
+            StartCoroutine(ChangeCamera());
+        }
 
         // Update is called once per frame
         void Update()
         {
-            if (UnityEngine.Input.GetKeyDown(KeyCode.X))
+            if (UnityEngine.Input.GetKeyDown(KeyCode.X) && CanChange)
             {
                 CameraMode = CameraMode == 1 ? 0 : 1;
+                m_changed = true;
             }
-            StartCoroutine(ChangeCamera());
+            if(m_changed)
+                StartCoroutine(ChangeCamera());
         }
 
         IEnumerator ChangeCamera()
@@ -39,6 +49,7 @@ namespace CultGame.Player
                 FirstPersonCamera.SetActive(true);
                 Player.GetComponent<FirstPersonCharacterController>().enabled = true;
             }
+            m_changed=false;
         }
 
         public object CaptureState()
