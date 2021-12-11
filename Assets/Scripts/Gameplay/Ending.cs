@@ -8,6 +8,7 @@ namespace CultGame.Gameplay
     public class Ending : MonoBehaviour
     {
         public Canvas HintCanvas;
+        public Canvas BlankCanvas;
         public ThirdPersonCharacterController Player;
         public Camera SecondCamera;
 
@@ -42,9 +43,14 @@ namespace CultGame.Gameplay
 
         IEnumerator OnFall()
         {
+            Player.gameObject.GetComponent<AudioSource>().Stop();
             yield return new WaitForSeconds(0.1f);
             Destroy(Player.gameObject);
+            BlankCanvas.enabled = true;
             SecondCamera.enabled = true;
+            yield return new WaitForSecondsRealtime(10f);
+            BlankCanvas.enabled = false;
+            yield return new WaitForSeconds(0f);
         }
 
         private void OnTriggerEnter(Collider other)
