@@ -9,6 +9,7 @@ namespace CultGame.Gameplay
     {
         public Canvas HintCanvas;
         public ThirdPersonCharacterController Player;
+        public Camera SecondCamera;
 
         private bool m_Falling = false;
         private bool m_HasFallen = false;
@@ -43,7 +44,7 @@ namespace CultGame.Gameplay
         {
             yield return new WaitForSeconds(0.1f);
             Destroy(Player.gameObject);
-            // TODO Switch to different camera
+            SecondCamera.enabled = true;
         }
 
         private void OnTriggerEnter(Collider other)
