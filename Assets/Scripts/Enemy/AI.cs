@@ -27,6 +27,7 @@ namespace CultGame.Enemy
         public GameObject CameraMonitor;
         public SceneLoader SceneLoader;
         public Canvas BlackCanvas;
+        public CameraSwitcher CameraSwitcher;
 
         private bool m_ChaseStarted = false;
         private bool m_StabPlayer = false;
@@ -105,8 +106,10 @@ namespace CultGame.Enemy
             if(m_StabPlayer)
             {
                 DisablePlayerMovement();
+                CameraSwitcher.CameraMode = 0;
+                CameraSwitcher.CanChange = false;
                 animator.SetTrigger("Stab");
-                // PLAY PLAYER FALLING ANIM
+                BlackCanvas.enabled = true;
                 SceneLoader.LoadScene(7, 2.0f);
             }
 
@@ -188,7 +191,6 @@ namespace CultGame.Enemy
 
         private void DisablePlayerMovement()
         {
-            CameraMonitor.GetComponent<CameraSwitcher>().enabled = false;
             player.GetComponent<ThirdPersonCharacterController>().enabled = false;
         }
 
