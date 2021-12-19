@@ -597,7 +597,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371931115}
   m_LocalRotation: {x: -0, y: -0.6660588, z: -0, w: 0.7458993}
-  m_LocalPosition: {x: -6528.4, y: 0, z: -818.1}
+  m_LocalPosition: {x: -6605.3, y: 0, z: -809.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1093161426}
@@ -614,8 +614,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 4.482422, y: 4.380686, z: 85.4209}
-  m_Center: {x: 1.7412109, y: -1.6903429, z: -20.285645}
+  m_Size: {x: 4.482422, y: 4.380686, z: 173.54486}
+  m_Center: {x: 1.7412133, y: -1.6903429, z: -12.874656}
 --- !u!114 &371931118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1906,11 +1906,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5794594375448414460, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000003511139
+      value: -0.00000003511139
       objectReference: {fileID: 0}
     - target: {fileID: 5794594375448414460, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000005044141
+      value: 0.000000005044141
       objectReference: {fileID: 0}
     - target: {fileID: 5794594375448414460, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2036,11 +2036,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802636613784, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000019041822
+      value: -0.000000019041824
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802636613784, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000027355687
+      value: 0.0000000027355689
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802643480863, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2301,8 +2301,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 4.482422, y: 4.380686, z: 85.4209}
-  m_Center: {x: 1.7412109, y: -1.6903429, z: -20.285645}
+  m_Size: {x: 4.482422, y: 4.380686, z: 151.93405}
+  m_Center: {x: 1.7412119, y: -1.6903429, z: -9.425331}
 --- !u!114 &1586151081
 MonoBehaviour:
   m_ObjectHideFlags: 0
