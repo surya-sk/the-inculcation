@@ -147,6 +147,8 @@ namespace CultGame.Enemy
                 if (distanceFromPlayer <= detectionRadius)
                 {
                     reasonOfDeath = "You were detected".ToUpper();
+                    FacePlayer();
+                    DisablePlayerMovement();
                     hasDetected = true;
                 }
             }
@@ -215,12 +217,20 @@ namespace CultGame.Enemy
         {
             Vector3 destination = waypoints.Dequeue().position;
             bool destinationReached = false;
+            player.GetComponent<ThirdPersonCharacterController>().playerSpeed = 2.0f;
             while(!destinationReached)
             {
                 Move(destination);
                 if (Vector3.Distance(transform.position, destination) < 3.0)
                 {
-                    destination = waypoints.Dequeue().position;
+                    try
+                    {
+                        destination = waypoints.Dequeue().position;
+                    }
+                    catch
+                    {
+                        Destroy(gameObject);
+                    }
                 }
 
                 if (Vector3.Distance(transform.position, lastPoint.position) <= 2.0)

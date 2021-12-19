@@ -24,7 +24,7 @@ namespace CultGame.Gameplay
                 yield return new WaitForSeconds(3f);
                 hitSound.Play();
                 yield return new WaitForSeconds(1f);
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene(5);
             }
         }
     }
