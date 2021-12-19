@@ -105,8 +105,9 @@ namespace CultGame.Enemy
         {
             if(m_StabPlayer)
             {
+                FacePlayer();
                 DisablePlayerMovement();
-                CameraSwitcher.CameraMode = 0;
+                CameraSwitcher.UpdateCamera(1);
                 CameraSwitcher.CanChange = false;
                 animator.SetTrigger("Stab");
                 BlackCanvas.enabled = true;
@@ -151,6 +152,16 @@ namespace CultGame.Enemy
             }
         }
 
+        /// <summary>
+        /// Looks in the player direction
+        /// </summary>
+        private void FacePlayer()
+        {
+            Vector3 direction = (player.position - transform.position).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+        }
+
         IEnumerator ChasePlayer()
         {
             m_ChaseStarted = true;
@@ -164,10 +175,12 @@ namespace CultGame.Enemy
                     StopAllCoroutines();
                     hasDetected = true;
                     DisablePlayerMovement();
+                    CameraSwitcher.UpdateCamera(1);
+                    FacePlayer();
                     navMeshAgent.speed = 0;
                     animator.SetTrigger("Stand");
                     animator.SetTrigger("Punch");
-                    yield return new WaitForSeconds(1.0f);
+                    yield return new WaitForSeconds(3.0f);
                     BlackCanvas.enabled = true;
                 }
                 if (distanceFromPlayer <= detectionRadius)

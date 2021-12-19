@@ -32,6 +32,12 @@ namespace CultGame.Player
                 StartCoroutine(ChangeCamera());
         }
 
+        public void UpdateCamera(int cameraMode)
+        {
+            CameraMode = cameraMode;
+            m_changed = true;
+        }
+
         IEnumerator ChangeCamera()
         {
             yield return new WaitForSeconds(0.01f);
