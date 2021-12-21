@@ -53,7 +53,7 @@ namespace CultGame.Car
 
         private void DeactivateDriving()
         {
-            playerRef.transform.position = new Vector3(transform.position.x - 4, 0, transform.position.z);
+            playerRef.transform.position = new Vector3(transform.position.x - 4, transform.position.y, transform.position.z);
             playerRef.SetActive(true);
             mainCamera.SetActive(true);
             cinemachineCamera.SetActive(true);
