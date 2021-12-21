@@ -719,7 +719,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 4
-  walkSpeed: 4
+  walkSpeed: 3
   runSpeed: 15
   rotationSpeed: 8
   walkSound: {fileID: 469728513635593257}
