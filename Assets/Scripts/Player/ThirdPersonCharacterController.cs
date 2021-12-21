@@ -15,8 +15,6 @@ namespace CultGame.Player
         public float rotationSpeed = 8.0f;
         public AudioSource walkSound;
         public AudioSource runSound;
-        public RuntimeAnimatorController defaultAnimController;
-        public RuntimeAnimatorController crouchAnimController;
 
         // bad idea to mess with this
         private float gravityValue = -9.81f;
@@ -62,17 +60,6 @@ namespace CultGame.Player
             {
                 isRunning = false;
             }
-
-            //if(isCrouched)
-            //{
-            //    animator.SetBool("Sneak", true);
-            //    walkSound.volume = 0.06f;
-            //}
-            //else
-            //{
-            //    animator.SetBool("Sneak", false);
-            //    walkSound.volume = 0.15f;
-            //}
 
             // Move character in direction of moveAngle, multiply by deltaTime for time-dependency, along with playerSpeed
             controller.Move(moveAngle * Time.deltaTime * playerSpeed);
