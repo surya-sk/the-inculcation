@@ -37,7 +37,8 @@ namespace CultGame.Objectives
                     nextObjective.GetComponent<BoxCollider>().enabled = true;
                 }
                 ObjectiveManager.GetInstance().SetCurrentObjective(objective);
-                savingDemo.Save();
+                if(savingDemo != null)
+                    savingDemo.Save();
             }
         }
 

@@ -176,6 +176,69 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &26864915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 26864918}
+  - component: {fileID: 26864917}
+  - component: {fileID: 26864916}
+  m_Layer: 0
+  m_Name: Convince her
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &26864916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26864915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8892b3b734f5e049a0ca6aa8f8becc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveString: Convince her to come home
+  objectiveText: {fileID: 269184682}
+  nextObjective: {fileID: 0}
+  firstObjective: {fileID: 1871794852}
+  pickupClip: {fileID: 8300000, guid: 418f7d94e80ab4d449b4dcac809a77fd, type: 3}
+  savingDemo: {fileID: 0}
+--- !u!65 &26864917
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26864915}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 49.2775, y: 1, z: 1.0000001}
+  m_Center: {x: 4.9863763, y: 0.0000000012334719, z: -0.0000017750416}
+--- !u!4 &26864918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26864915}
+  m_LocalRotation: {x: -0.011925755, y: 0.09880426, z: -0.0011841954, w: 0.99503475}
+  m_LocalPosition: {x: 129.5, y: 6.9, z: 151.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: -1.347, y: 11.345, z: -0.27}
 --- !u!1001 &80832829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -612,6 +675,17 @@ Transform:
   m_Father: {fileID: 1715435551}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &269184682 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1676131245, guid: 48e5c8a6e3036e244953042278ab4fc8, type: 3}
+  m_PrefabInstance: {fileID: 693840750}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &278151267
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,6 +822,69 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &320449946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 320449949}
+  - component: {fileID: 320449948}
+  - component: {fileID: 320449947}
+  m_Layer: 0
+  m_Name: Get back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &320449947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320449946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8892b3b734f5e049a0ca6aa8f8becc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveString: Escape the cultists and get back to Alyssa
+  objectiveText: {fileID: 269184682}
+  nextObjective: {fileID: 26864915}
+  firstObjective: {fileID: 1871794852}
+  pickupClip: {fileID: 8300000, guid: 418f7d94e80ab4d449b4dcac809a77fd, type: 3}
+  savingDemo: {fileID: 0}
+--- !u!65 &320449948
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320449946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 49.2775, y: 1, z: 1.0000001}
+  m_Center: {x: 4.9863763, y: 0.0000000012334719, z: -0.0000017750416}
+--- !u!4 &320449949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320449946}
+  m_LocalRotation: {x: -0.011925755, y: 0.09880426, z: -0.0011841954, w: 0.99503475}
+  m_LocalPosition: {x: 130, y: 6.9, z: 154}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: -1.347, y: 11.345, z: -0.27}
 --- !u!4 &387061393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4203199286425600, guid: 42612f8b6c0dce8468648f3f08db6d96, type: 3}
@@ -993,11 +1130,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802643480863, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9140573
+      value: 0.91405725
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802643480863, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.07322655
+      value: -0.07322656
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802643480863, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1005,7 +1142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802643480863, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.031856045
+      value: 0.03185605
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
@@ -4746,6 +4883,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65a2cfc384aa26b43bd8dbddfc0a08c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1871794852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1871794855}
+  - component: {fileID: 1871794854}
+  - component: {fileID: 1871794853}
+  m_Layer: 0
+  m_Name: Run away
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1871794853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871794852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8892b3b734f5e049a0ca6aa8f8becc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectiveString: Run away
+  objectiveText: {fileID: 269184682}
+  nextObjective: {fileID: 320449946}
+  firstObjective: {fileID: 1871794852}
+  pickupClip: {fileID: 8300000, guid: 418f7d94e80ab4d449b4dcac809a77fd, type: 3}
+  savingDemo: {fileID: 1950597606}
+--- !u!65 &1871794854
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871794852}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.962906, y: 1, z: 1}
+  m_Center: {x: 0.04019928, y: 0, z: 0}
+--- !u!4 &1871794855
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871794852}
+  m_LocalRotation: {x: -0.011925755, y: 0.09880426, z: -0.0011841954, w: 0.99503475}
+  m_LocalPosition: {x: 130.13081, y: 6.290187, z: 130.64793}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: -1.347, y: 11.345, z: -0.27}
 --- !u!1001 &1889062232
 PrefabInstance:
   m_ObjectHideFlags: 0
