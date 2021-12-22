@@ -28,6 +28,8 @@ namespace CultGame.Enemy
         public SceneLoader SceneLoader;
         public Canvas BlackCanvas;
         public CameraSwitcher CameraSwitcher;
+        public AudioSource PianoSound;
+        public AudioSource LaughSound;
 
         private bool m_ChaseStarted = false;
         private bool m_StabPlayer = false;
@@ -66,12 +68,14 @@ namespace CultGame.Enemy
                     break;
                 case "Laugh":
                     animator.SetTrigger("Laugh");
+                    LaughSound.Play();
                     break;
                 case "Dance":
                     animator.SetTrigger("Dance");
                     break;
                 case "Piano":
                     animator.SetTrigger("Piano");
+                    PianoSound.Play();
                     break;
                 case "Sit":
                     animator.SetTrigger("Sit");
@@ -167,6 +171,10 @@ namespace CultGame.Enemy
         IEnumerator ChasePlayer()
         {
             m_ChaseStarted = true;
+            if(PianoSound != null)
+                PianoSound.Stop();
+            if(LaughSound != null)
+                LaughSound.Stop();
             Vector3 randomLocation = new Vector3(WatchPoint.position.x + GetRandomFloat(), WatchPoint.position.y, WatchPoint.position.z + GetRandomFloat());
             while (gameObject.activeSelf)
             {
