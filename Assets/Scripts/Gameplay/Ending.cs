@@ -11,6 +11,7 @@ namespace CultGame.Gameplay
         public Canvas BlankCanvas;
         public ThirdPersonCharacterController Player;
         public Camera SecondCamera;
+        public Transform CameraEndPoint;
 
         private bool m_Falling = false;
         private bool m_HasFallen = false;
@@ -50,7 +51,26 @@ namespace CultGame.Gameplay
             SecondCamera.enabled = true;
             yield return new WaitForSecondsRealtime(10f);
             BlankCanvas.enabled = false;
-            yield return new WaitForSeconds(0f);
+            yield return new WaitForSecondsRealtime(5f);
+            StartCoroutine(InterpolateCamera());
+            yield return null;
+        }
+
+        IEnumerator InterpolateCamera()
+        {
+            float timeElapsed = 0;
+            float lerpDuration = 10f;
+            Vector3 valueToLerp = Vector3.zero;
+
+            while(timeElapsed < lerpDuration)
+            {
+                valueToLerp = Vector3.Lerp(SecondCamera.transform.position, CameraEndPoint.position, Time.deltaTime);
+                timeElapsed += Time.deltaTime;
+                SecondCamera.transform.position = valueToLerp;
+
+                yield return null;
+            }
+            valueToLerp = CameraEndPoint.position;
         }
 
         private void OnTriggerEnter(Collider other)
