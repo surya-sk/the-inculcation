@@ -2702,6 +2702,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 469728513635593257, guid: 8131c3c29fac77149b2ac44c65cbcb60, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 469728513635593259, guid: 8131c3c29fac77149b2ac44c65cbcb60, type: 3}
+      propertyPath: CanRun
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 469728513635593428, guid: 8131c3c29fac77149b2ac44c65cbcb60, type: 3}
+      propertyPath: CanRun
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 740180549591765375, guid: 8131c3c29fac77149b2ac44c65cbcb60, type: 3}
       propertyPath: m_Name
       value: Remy
