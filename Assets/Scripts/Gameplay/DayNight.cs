@@ -49,6 +49,7 @@ namespace CultGame.Gameplay
     public void RestoreState(object state)
     {
         DirectionalLight.intensity = (float)state;
+        UpdateSkybox();
     }
 }
 }
