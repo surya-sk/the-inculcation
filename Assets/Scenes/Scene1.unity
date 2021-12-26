@@ -692,8 +692,24 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4858819891837381379, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
+      propertyPath: WheelFL
+      value: 
+      objectReference: {fileID: 1586976265}
+    - target: {fileID: 4858819891837381379, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
+      propertyPath: WheelFR
+      value: 
+      objectReference: {fileID: 594351275}
+    - target: {fileID: 4858819891837381379, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
+      propertyPath: WheelRL
+      value: 
+      objectReference: {fileID: 995709241}
+    - target: {fileID: 4858819891837381379, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
+      propertyPath: WheelRR
+      value: 
+      objectReference: {fileID: 1253260763}
+    - target: {fileID: 4858819891837381379, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
       propertyPath: motorForce
-      value: 300
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4858819891837381379, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
       propertyPath: maxSteerAngle
@@ -753,37 +769,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
---- !u!1 &386199486 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4858819891837381377, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
-  m_PrefabInstance: {fileID: 386199485}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &386199487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386199486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63d7f21dbbcbd7a4481ccf47b193a9f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueId: 740f2d9c-0f9f-435e-a0f1-81dc897816ca
---- !u!114 &386199488
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386199486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63d7f21dbbcbd7a4481ccf47b193a9f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uniqueId: 5571b70e-c799-4f0f-8397-75281f53a50f
 --- !u!1 &437636696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,6 +1003,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueId: 000177ae-c208-4016-860c-93573daa532b
+--- !u!146 &594351275 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 8133208480115650986, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
+  m_PrefabInstance: {fileID: 386199485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &753920930 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3956762955485063481, guid: 48e5c8a6e3036e244953042278ab4fc8, type: 3}
@@ -1423,6 +1413,11 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
+--- !u!146 &995709241 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 8133208479399484140, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
+  m_PrefabInstance: {fileID: 386199485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1017584182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1766,6 +1761,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!146 &1253260763 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 8133208480171597482, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
+  m_PrefabInstance: {fileID: 386199485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1363673263 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5745408576344579541, guid: 708740d3c95453f43808b02c078f2dec, type: 3}
@@ -1884,7 +1884,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802643480863, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0075888294
+      value: -0.0075888303
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
@@ -2181,6 +2181,11 @@ Transform:
   m_Father: {fileID: 1093161426}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -175.543, z: 0}
+--- !u!146 &1586976265 stripped
+WheelCollider:
+  m_CorrespondingSourceObject: {fileID: 8133208479944508143, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
+  m_PrefabInstance: {fileID: 386199485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1641642286
 GameObject:
   m_ObjectHideFlags: 0

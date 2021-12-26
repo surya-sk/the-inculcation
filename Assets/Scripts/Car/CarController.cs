@@ -7,79 +7,52 @@ namespace CultGame.Car
 {
     public class CarController : MonoBehaviour, ISaveable
     {
-        private float m_Horizontal;
-        private float m_Vertical;
-        private float steerAngle;
+        public WheelCollider WheelFL;
+        public WheelCollider WheelFR;
+        public WheelCollider WheelRL;
+        public WheelCollider WheelRR;
+        public float MaxTorque = 500f;
+        public float BrakeTorque = 1000f;
+        // max wheel turn angle;
+        public float MaxWheelTurnAngle = 30f; // degrees
+        public Vector3 CenterOfMass = new Vector3(0f, 0f, 0f); // unchanged
+        public Vector3 EulerTest;
+        // acceleration increment counter
+        private float m_TorquePower = 0f;
+        // turn increment counter
+        private float m_SteerAngle = 30f;
 
-        public WheelCollider frontDriverW;
-        public WheelCollider frontPassengerW;
-        public WheelCollider rearDriverW;
-        public WheelCollider rearPassengerW;
-
-        public Transform frontDriverT;
-        public Transform frontPassengerT;
-        public Transform rearDriverT;
-        public Transform rearPassengerT;
-
-        public float maxSteerAngle = 30f;
-        public float motorForce = 50f;
-
-        public AudioSource engineRevSound;
-
-
-        private void FixedUpdate()
+        void Start()
         {
-            GetInput();
-            Steer();
-            Accerlerate();
-            UpdateWheelPoses();
+            GetComponent<Rigidbody>().centerOfMass = CenterOfMass;
         }
 
-        private void OnDisable()
+        // Physics updates
+        void FixedUpdate()
         {
-            engineRevSound.Stop();
-        }
-
-        private void GetInput()
-        {
-            m_Horizontal = UnityEngine.Input.GetAxisRaw("Horizontal");
-            m_Vertical = UnityEngine.Input.GetAxisRaw("Vertical");
-            if(m_Vertical > 0 && !engineRevSound.isPlaying)
+            // CONTROLS - FORWARD & RearWARD
+            if (UnityEngine.Input.GetKey(KeyCode.B) || UnityEngine.Input.GetKey(KeyCode.Joystick1Button1))
             {
-                engineRevSound.Play();
+                // BRAKE
+                m_TorquePower = 0f;
+                WheelRL.brakeTorque = BrakeTorque;
+                WheelRR.brakeTorque = BrakeTorque;
             }
-        }
-
-        private void Steer()
-        {
-            steerAngle = maxSteerAngle * m_Horizontal;
-            frontDriverW.steerAngle = steerAngle;
-            frontPassengerW.steerAngle = steerAngle;
-        }
-
-        private void Accerlerate()
-        {
-            frontDriverW.motorTorque = m_Vertical * motorForce;
-            frontPassengerW.motorTorque = m_Vertical * motorForce;
-        }
-
-        private void UpdateWheelPoses()
-        {
-            UpdateWheelPose(frontDriverW, frontDriverT);
-            UpdateWheelPose(frontPassengerW, frontPassengerT);
-            UpdateWheelPose(rearDriverW, rearDriverT);
-            UpdateWheelPose(rearPassengerW, rearPassengerT);
-        }
-
-        private void UpdateWheelPose(WheelCollider _collider, Transform _transform)
-        {
-            Vector3 position = _transform.position;
-            Quaternion rotation = _transform.rotation;
-
-            _collider.GetWorldPose(out position, out rotation);
-
-            _transform.position = position;
-            _transform.rotation = rotation;
+            else
+            {
+                // SPEED
+                m_TorquePower = MaxTorque * Mathf.Clamp(UnityEngine.Input.GetAxis("Vertical"), -1, 1);
+                WheelRL.brakeTorque = 0f;
+                WheelRR.brakeTorque = 0f;
+            }
+            // Apply torque
+            WheelRR.motorTorque = m_TorquePower;
+            WheelRL.motorTorque = m_TorquePower;
+            // CONTROLS - LEFT & RIGHT
+            // apply steering to front wheels
+            m_SteerAngle = MaxWheelTurnAngle * UnityEngine.Input.GetAxis("Horizontal");
+            WheelFL.steerAngle = m_SteerAngle;
+            WheelFR.steerAngle = m_SteerAngle;
         }
 
         public object CaptureState()
