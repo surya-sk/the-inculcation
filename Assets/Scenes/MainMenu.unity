@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 53.31015, g: 52.587738, b: 75.20349, a: 1}
+  m_IndirectSpecularColor: {r: 53.294632, g: 52.575836, b: 75.19519, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 5470114454021311615}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &286657936
@@ -1083,7 +1083,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2673.3096
-  m_Range: 40
+  m_Range: 1.87
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1140,7 +1140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618708936}
   m_LocalRotation: {x: 0.703053, y: 0.05579117, z: -0.15398002, w: 0.6920217}
-  m_LocalPosition: {x: -0.2, y: 1.336, z: 9.492}
+  m_LocalPosition: {x: -0.152, y: 0.753, z: 9.547}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
