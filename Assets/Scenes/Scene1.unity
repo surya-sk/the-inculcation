@@ -1008,6 +1008,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1676131245, guid: 48e5c8a6e3036e244953042278ab4fc8, type: 3}
+      propertyPath: m_text
+      value: '- Drive to the cabin'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676131245, guid: 48e5c8a6e3036e244953042278ab4fc8, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: 2426
+      objectReference: {fileID: 0}
     - target: {fileID: 3956762955485063481, guid: 48e5c8a6e3036e244953042278ab4fc8, type: 3}
       propertyPath: m_Name
       value: UI
@@ -1505,11 +1513,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5794594375448414460, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.06523
+      value: 0.06522998
       objectReference: {fileID: 0}
     - target: {fileID: 5794594375448414460, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.006580552
+      value: 0.0065805516
       objectReference: {fileID: 0}
     - target: {fileID: 5794594375448414460, guid: ac89c5abf46fda14fa45105af2a3fed7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1983,11 +1991,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802636613784, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.06523
+      value: 0.06522998
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802636613784, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0065805535
+      value: 0.006580552
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802643480863, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalPosition.x
