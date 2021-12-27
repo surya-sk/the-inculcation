@@ -27,7 +27,7 @@ namespace CultGame.Gameplay
             {
                 DirectionalLight.intensity -= IntensityMultiplier;
                 UpdateSkybox();
-                yield return new WaitForSeconds(10f);
+                yield return new WaitForSeconds(80f);
             }
         }
 
