@@ -11,7 +11,7 @@ namespace CultGame.Enemy
         {
             if(other.gameObject.tag == "Player")
             {
-                Enemy.SetActive(true);
+                Enemy.GetComponent<AI>().enabled = true;
             }
         }
     }
