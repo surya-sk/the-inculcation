@@ -864,7 +864,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GAME TITLE
+  m_text: the inculcation
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5547e9f32c9ab7d488686b41861cd3db, type: 2}
   m_sharedMaterial: {fileID: 5308443322533650751, guid: 5547e9f32c9ab7d488686b41861cd3db, type: 2}
