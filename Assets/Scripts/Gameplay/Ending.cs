@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using CultGame.Player;
+using TMPro;
+using CultGame.Utils;
 
 namespace CultGame.Gameplay
 {
@@ -12,6 +14,12 @@ namespace CultGame.Gameplay
         public ThirdPersonCharacterController Player;
         public Camera SecondCamera;
         public Transform CameraEndPoint;
+        public TextMeshProUGUI DisciplineText;
+        public TextMeshProUGUI PersonText;
+        public string[] Disciplines;
+        public string[] Artists;
+        public float TimeBetweenCredits;
+        public SceneLoader SceneLoader;
 
         private bool m_Falling = false;
         private bool m_HasFallen = false;
@@ -62,7 +70,7 @@ namespace CultGame.Gameplay
             float lerpDuration = 10f;
             Vector3 valueToLerp = Vector3.zero;
 
-            while(timeElapsed < lerpDuration)
+            while(Vector3.Distance(SecondCamera.transform.position, CameraEndPoint.position) > 2)
             {
                 valueToLerp = Vector3.Lerp(SecondCamera.transform.position, CameraEndPoint.position, Time.deltaTime);
                 timeElapsed += Time.deltaTime;
@@ -71,6 +79,23 @@ namespace CultGame.Gameplay
                 yield return null;
             }
             valueToLerp = CameraEndPoint.position;
+            StartCoroutine(EndCredits());
+        }
+
+        IEnumerator EndCredits()
+        {
+            int counter = 0;
+            yield return new WaitForSeconds(TimeBetweenCredits);
+            DisciplineText.enabled = true;
+            PersonText.enabled = true;
+            while (counter < Disciplines.Length)
+            {
+                DisciplineText.text = Disciplines[counter];
+                PersonText.text = Artists[counter];
+                yield return new WaitForSeconds(TimeBetweenCredits);
+                counter++;
+            }
+            SceneLoader.MainMenu();
         }
 
         private void OnTriggerEnter(Collider other)
