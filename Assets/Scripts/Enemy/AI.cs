@@ -120,6 +120,7 @@ namespace CultGame.Enemy
 
             if(hasDetected)
             {
+                FacePlayer();
                 gameOverRef.EndGame(reasonOfDeath);
             }
 
@@ -148,7 +149,6 @@ namespace CultGame.Enemy
             if(shouldDetectPlayer)
             {
                 distanceFromPlayer = Vector3.Distance(player.position, transform.position);
-                Debug.Log(distanceFromPlayer);
                 if (distanceFromPlayer <= detectionRadius)
                 {
                     reasonOfDeath = "You were detected".ToUpper();
