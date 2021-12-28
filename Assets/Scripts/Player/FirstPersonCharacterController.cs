@@ -15,6 +15,7 @@ namespace CultGame.Player
         public float lookXLimit = 45.0f;
         public AudioSource walkSound;
         public AudioSource runSound;
+        public bool CanRun;
 
         CharacterController characterController;
         Vector3 moveDirection = Vector3.zero;
@@ -58,7 +59,7 @@ namespace CultGame.Player
 
             if (moveDirection.z != 0)
             {
-                if (isRunning)
+                if (isRunning && CanRun)
                 {
                     walkSound.Stop();
                     if (!runSound.isPlaying)
@@ -83,12 +84,12 @@ namespace CultGame.Player
 
                 // Player and Camera rotation
                 if (canMove)
-            {
-                rotationX += -UnityEngine.Input.GetAxis("Mouse Y") * lookSpeed;
-                rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-                playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-                transform.rotation *= Quaternion.Euler(0, UnityEngine.Input.GetAxis("Mouse X") * lookSpeed, 0);
-            }
+                {
+                    rotationX += -UnityEngine.Input.GetAxis("Mouse Y") * lookSpeed;
+                    rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+                    playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+                    transform.rotation *= Quaternion.Euler(0, UnityEngine.Input.GetAxis("Mouse X") * lookSpeed, 0);
+                }
         }
     }
 }

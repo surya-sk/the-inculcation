@@ -15,6 +15,7 @@ namespace CultGame.Player
         public float rotationSpeed = 8.0f;
         public AudioSource walkSound;
         public AudioSource runSound;
+        public bool CanRun;
 
         // bad idea to mess with this
         private float gravityValue = -9.81f;
@@ -52,7 +53,7 @@ namespace CultGame.Player
                 isCrouched = !isCrouched;
             }
 
-            if(UnityEngine.Input.GetKey(KeyCode.LeftShift) || UnityEngine.Input.GetKey(KeyCode.JoystickButton8))
+            if(UnityEngine.Input.GetKey(KeyCode.LeftShift) || UnityEngine.Input.GetKey(KeyCode.JoystickButton8) && CanRun)
             {
                 isRunning = true;
             }

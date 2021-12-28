@@ -54,6 +54,11 @@ namespace CultGame.Utils
             StartGame();
         }
 
+        public void Credits()
+        {
+            LoadScene(8);
+        }
+
 
         public void LoadScene(int index, float waitTime = 0.0f)
         {

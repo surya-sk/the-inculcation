@@ -23,7 +23,7 @@ namespace CultGame.Player
         // Update is called once per frame
         void Update()
         {
-            if (UnityEngine.Input.GetKeyDown(KeyCode.X) && CanChange)
+            if ((UnityEngine.Input.GetKeyDown(KeyCode.X) || UnityEngine.Input.GetKeyDown(KeyCode.Joystick1Button2)) && CanChange)
             {
                 CameraMode = CameraMode == 1 ? 0 : 1;
                 m_changed = true;

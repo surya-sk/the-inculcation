@@ -23,7 +23,7 @@ namespace CultGame.Pickups
             noteCanvas.enabled = false;
             noteText.text = text;
             isReadingText = false;
-            promptText.text = "Press X to read";
+            promptText.text = "Press B to read";
         }
 
         void Update()
@@ -31,7 +31,7 @@ namespace CultGame.Pickups
             
             if(promptCanvas.enabled && !isReadingText)
             {
-                if (UnityEngine.Input.GetKeyDown(KeyCode.X))
+                if (UnityEngine.Input.GetKeyDown(KeyCode.B) || UnityEngine.Input.GetKeyDown(KeyCode.Joystick1Button1))
                 {
                     isReadingText = true;                
                 }
@@ -40,16 +40,16 @@ namespace CultGame.Pickups
             // Pop up note on the screen
             else if (isReadingText)
             {
-                promptText.text = "Press X to exit";
+                promptText.text = "Press B to exit";
                 noteCanvas.enabled = true;
                 Time.timeScale = 0;
-                if (UnityEngine.Input.GetKeyDown(KeyCode.X))
+                if (UnityEngine.Input.GetKeyDown(KeyCode.B) || UnityEngine.Input.GetKeyDown(KeyCode.Joystick1Button1))
                 {
                     // reset values
                     isReadingText = false;
                     noteCanvas.enabled = false;
                     Time.timeScale = 1;
-                    promptText.text = "Press X to read";
+                    promptText.text = "Press B to read";
                 }
             }
         }
