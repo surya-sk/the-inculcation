@@ -713,6 +713,14 @@ PrefabInstance:
       propertyPath: nextObjectiveToExitCar
       value: 
       objectReference: {fileID: 1418394515}
+    - target: {fileID: 3725331177106886903, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
+      propertyPath: m_Volume
+      value: 0.266
+      objectReference: {fileID: 0}
+    - target: {fileID: 3725331177106886904, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
+      propertyPath: m_Volume
+      value: 0.122
+      objectReference: {fileID: 0}
     - target: {fileID: 4858819891837381377, guid: 7e4a884e5b543ff419110fe7a188c67d, type: 3}
       propertyPath: m_Name
       value: Car

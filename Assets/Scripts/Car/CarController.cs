@@ -17,6 +17,8 @@ namespace CultGame.Car
         public float MaxWheelTurnAngle = 30f; // degrees
         public Vector3 CenterOfMass = new Vector3(0f, 0f, 0f); // unchanged
         public Vector3 EulerTest;
+        public AudioSource RevSound;
+
         // acceleration increment counter
         private float m_TorquePower = 0f;
         // turn increment counter
@@ -41,6 +43,8 @@ namespace CultGame.Car
             else
             {
                 // SPEED
+                if(!RevSound.isPlaying)
+                    RevSound.Play();
                 m_TorquePower = MaxTorque * Mathf.Clamp(UnityEngine.Input.GetAxis("Vertical"), -1, 1);
                 WheelRL.brakeTorque = 0f;
                 WheelRR.brakeTorque = 0f;
