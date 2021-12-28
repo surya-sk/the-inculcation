@@ -39,7 +39,7 @@ namespace CultGame.Player
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
             // Press Left Shift to run
-            bool isRunning = UnityEngine.Input.GetKey(KeyCode.LeftShift) || UnityEngine.Input.GetKey(KeyCode.JoystickButton8);
+            bool isRunning = UnityEngine.Input.GetKey(KeyCode.LeftShift) || UnityEngine.Input.GetKey(KeyCode.JoystickButton8) && CanRun;
             float curSpeedX = canMove ? (isRunning ? runningSpeed : walkingSpeed) * UnityEngine.Input.GetAxis("Vertical") : 0;
             float curSpeedY = canMove ? (isRunning ? runningSpeed : walkingSpeed) * UnityEngine.Input.GetAxis("Horizontal") : 0;
             float movementDirectionY = moveDirection.y;
@@ -59,7 +59,7 @@ namespace CultGame.Player
 
             if (moveDirection.z != 0)
             {
-                if (isRunning && CanRun)
+                if (isRunning)
                 {
                     walkSound.Stop();
                     if (!runSound.isPlaying)
