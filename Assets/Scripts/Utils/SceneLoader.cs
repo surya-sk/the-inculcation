@@ -12,8 +12,7 @@ namespace CultGame.Utils
         public TextMeshProUGUI loadingText;
         public void ReloadGame()
         {
-            SceneManager.LoadScene(0);
-            Time.timeScale = 1;
+            StartGame();
         }
 
         public void MainMenu()
