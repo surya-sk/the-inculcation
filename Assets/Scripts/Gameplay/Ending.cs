@@ -67,7 +67,6 @@ namespace CultGame.Gameplay
         IEnumerator InterpolateCamera()
         {
             float timeElapsed = 0;
-            float lerpDuration = 10f;
             Vector3 valueToLerp = Vector3.zero;
 
             while(Vector3.Distance(SecondCamera.transform.position, CameraEndPoint.position) > 2)
@@ -95,7 +94,7 @@ namespace CultGame.Gameplay
                 yield return new WaitForSeconds(TimeBetweenCredits);
                 counter++;
             }
-            SceneLoader.MainMenu();
+            SceneLoader.Credits();
         }
 
         private void OnTriggerEnter(Collider other)

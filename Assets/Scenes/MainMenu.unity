@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.030021533, g: 0.029617205, b: 0.042358756, a: 1}
+  m_IndirectSpecularColor: {r: 0.030049764, g: 0.029628769, b: 0.042343915, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -682,7 +682,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 421509823}
         m_TargetAssemblyTypeName: CultGame.Utils.SceneLoader, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: Credits
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

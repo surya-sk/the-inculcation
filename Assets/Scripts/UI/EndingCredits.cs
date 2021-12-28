@@ -30,7 +30,7 @@ namespace CultGame.UI
             DisciplineText.enabled = false;
             PersonText.enabled = false;
             yield return new WaitForSeconds(TimeBetweenCredits);
-            SceneLoader.MainMenu();
+            SceneLoader.Credits();
         }
 
         private void OnTriggerEnter(Collider other)
