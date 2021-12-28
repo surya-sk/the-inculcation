@@ -31,7 +31,6 @@ namespace CultGame.Audio
             m_Triggered = true;
             DialogAudioSource.PlayOneShot(DialogClip);
             GetComponent<BoxCollider>().enabled = !m_Triggered;
-            Debug.Log("Triggered");
             yield return null;
         }
 
