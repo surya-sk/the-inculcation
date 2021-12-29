@@ -1,3 +1,4 @@
+using CultGame.Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ namespace CultGame.Gameplay
     public class EndScene2 : MonoBehaviour
     {
         public AudioSource hitSound;
+        public CameraSwitcher CameraSwitcher;
       
         private void OnTriggerEnter(Collider other)
         {
@@ -25,7 +27,7 @@ namespace CultGame.Gameplay
         {
             while (gameObject.activeSelf)
             {
-                // TODO: Switch to first person here
+                CameraSwitcher.UpdateCamera(1);
                 yield return new WaitForSeconds(3f);
                 hitSound.Play();
                 yield return new WaitForSeconds(1f);
