@@ -202,11 +202,13 @@ namespace CultGame.Enemy
                 {
                     navMeshAgent.speed = RunSpeed;
                     Run(player.position);
+                    if(RunSpeed > 16f)
+                        RunSpeed -= 0.02f;
                 }
                 else
                 {
-                    navMeshAgent.speed = 3.0f;
-                    detectionRadius = 10;
+                    navMeshAgent.speed = 4.0f;
+                    detectionRadius = 20;
                     if(Vector3.Distance(randomLocation, transform.position) < 3.0)
                     {
                         new Vector3(WatchPoint.position.x + GetRandomFloat(), WatchPoint.position.y, WatchPoint.position.z + GetRandomFloat());
@@ -256,6 +258,7 @@ namespace CultGame.Enemy
                     animator.SetTrigger("Idle");
                     walkSound.Stop();
                     player.GetComponent<ThirdPersonCharacterController>().playerSpeed = 4.0f;
+                    player.GetComponent<FirstPersonCharacterController>().walkingSpeed = 6.0f;
                     destinationReached = true;
                 }
 
