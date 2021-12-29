@@ -109,13 +109,7 @@ namespace CultGame.Enemy
         {
             if(m_StabPlayer)
             {
-                FacePlayer();
-                DisablePlayerMovement();
-                CameraSwitcher.UpdateCamera(1);
-                CameraSwitcher.CanChange = false;
-                animator.SetTrigger("Stab");
-                BlackCanvas.enabled = true;
-                SceneLoader.LoadScene(7);
+                StartCoroutine(StabPlayer());
             }
 
             if(hasDetected)
@@ -139,6 +133,18 @@ namespace CultGame.Enemy
                     }
                 }
             }
+        }
+
+        IEnumerator StabPlayer()
+        {
+            FacePlayer();
+            DisablePlayerMovement();
+            CameraSwitcher.UpdateCamera(1);
+            CameraSwitcher.CanChange = false;
+            animator.SetTrigger("Stab");
+            BlackCanvas.enabled = true;
+            yield return new WaitForSeconds(2f);
+            SceneLoader.LoadScene(7);
         }
 
         /// <summary>

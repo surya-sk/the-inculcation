@@ -9,6 +9,8 @@ namespace CultGame.Utils
 {
     public class SceneLoader : MonoBehaviour
     {
+        public GameObject LoadingScreen;
+
         public void ReloadGame()
         {
             StartGame();
@@ -61,7 +63,7 @@ namespace CultGame.Utils
         public void LoadScene(int index)
         {
             GameSceneManager.SCENE_TO_LOAD = index;
-            SceneManager.LoadScene(9);
+            LoadingScreen.SetActive(true);
         }
 
         public void QuitGame()
