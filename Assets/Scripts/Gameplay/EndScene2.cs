@@ -10,6 +10,7 @@ namespace CultGame.Gameplay
     {
         public AudioSource hitSound;
         public CameraSwitcher CameraSwitcher;
+        public Canvas BlankCanvas;
       
         private void OnTriggerEnter(Collider other)
         {
@@ -30,7 +31,8 @@ namespace CultGame.Gameplay
                 CameraSwitcher.UpdateCamera(1);
                 yield return new WaitForSeconds(3f);
                 hitSound.Play();
-                yield return new WaitForSeconds(1f);
+                BlankCanvas.enabled = true;
+                yield return new WaitForSeconds(5f);
                 SceneManager.LoadScene(5);
             }
         }
