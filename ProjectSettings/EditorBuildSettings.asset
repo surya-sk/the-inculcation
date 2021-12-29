@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
-    guid: e31e6df3fecab0d43be53df364c24f53
+    guid: 0bcfb336ba7d8aa4a8faa41226415f45
   - enabled: 1
     path: Assets/Scenes/Opening Text.unity
     guid: e7dfc87d30ca2f84994d56d4fc391965
@@ -32,5 +32,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 2a8c881f21ae29242b6ed141cbb6074f
+  - enabled: 1
+    path: Assets/Scenes/Loading.unity
+    guid: e31e6df3fecab0d43be53df364c24f53
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: d5381b85516e6f245ba72dac56f03324, type: 2}
