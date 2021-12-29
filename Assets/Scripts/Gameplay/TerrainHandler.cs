@@ -5,6 +5,9 @@ using CultGame.Saving;
 
 namespace CultGame.Gameplay
 {
+    /// <summary>
+    /// Handles terrains activation and deactivation
+    /// </summary>
     public class TerrainHandler : MonoBehaviour, ISaveable
     {
         public GameObject terrain;

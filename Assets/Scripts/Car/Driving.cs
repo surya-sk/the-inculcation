@@ -40,6 +40,9 @@ namespace CultGame.Car
             }
         }
 
+        /// <summary>
+        /// Deactivates player, activates car and car controller
+        /// </summary>
         private void ActivateDriving()
         {
             playerRef.SetActive(false);
@@ -51,6 +54,9 @@ namespace CultGame.Car
             engineStartSound.Play();
         }
 
+        /// <summary>
+        /// Deactivates car, spwans player
+        /// </summary>
         private void DeactivateDriving()
         {
             playerRef.transform.position = new Vector3(transform.position.x - 4, transform.position.y, transform.position.z);

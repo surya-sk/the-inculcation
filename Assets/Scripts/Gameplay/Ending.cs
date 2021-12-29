@@ -44,12 +44,20 @@ namespace CultGame.Gameplay
             }
         }
 
+        /// <summary>
+        /// Shows the follow hint for 4 seconds
+        /// </summary>
+        /// <returns></returns>
         IEnumerator PromptJump()
         {
             yield return new WaitForSeconds(4f);
             HintCanvas.enabled = false;
         }
 
+        /// <summary>
+        /// Shows a black screen, enables ending camera and setups up interpolation after player has fallen into pit
+        /// </summary>
+        /// <returns></returns>
         IEnumerator OnFall()
         {
             Player.gameObject.GetComponent<AudioSource>().Stop();
@@ -64,6 +72,10 @@ namespace CultGame.Gameplay
             yield return null;
         }
 
+        /// <summary>
+        /// Moves the camera slowly towards the CameraEndPoint
+        /// </summary>
+        /// <returns></returns>
         IEnumerator InterpolateCamera()
         {
             float timeElapsed = 0;
@@ -81,6 +93,10 @@ namespace CultGame.Gameplay
             StartCoroutine(EndCredits());
         }
 
+        /// <summary>
+        /// Shows the short end credits and pulls up the Credits scene
+        /// </summary>
+        /// <returns></returns>
         IEnumerator EndCredits()
         {
             int counter = 0;

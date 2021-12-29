@@ -169,6 +169,10 @@ namespace CultGame.Enemy
             transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
         }
 
+        /// <summary>
+        /// Chase the player and stab them if close
+        /// </summary>
+        /// <returns></returns>
         IEnumerator ChasePlayer()
         {
             m_ChaseStarted = true;
@@ -213,9 +217,13 @@ namespace CultGame.Enemy
             }
         }
 
+        /// <summary>
+        /// Prevents the player from moving
+        /// </summary>
         private void DisablePlayerMovement()
         {
             player.GetComponent<ThirdPersonCharacterController>().enabled = false;
+            player.GetComponent<FirstPersonCharacterController>().enabled = false;
         }
 
         /// <summary>
@@ -227,6 +235,7 @@ namespace CultGame.Enemy
             Vector3 destination = waypoints.Dequeue().position;
             bool destinationReached = false;
             player.GetComponent<ThirdPersonCharacterController>().playerSpeed = 2.0f;
+            player.GetComponent<FirstPersonCharacterController>().walkingSpeed = 2.0f;
             while(!destinationReached)
             {
                 Move(destination);

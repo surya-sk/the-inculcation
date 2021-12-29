@@ -26,6 +26,10 @@ namespace CultGame.Audio
             }
         }
 
+        /// <summary>
+        /// A coroutine that plays the audioclip once
+        /// </summary>
+        /// <returns></returns>
         IEnumerator PlayDialog()
         {
             m_Triggered = true;

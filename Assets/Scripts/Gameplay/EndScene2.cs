@@ -8,6 +8,7 @@ namespace CultGame.Gameplay
     public class EndScene2 : MonoBehaviour
     {
         public AudioSource hitSound;
+      
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.tag == "Player")
@@ -16,6 +17,10 @@ namespace CultGame.Gameplay
             }
         }
 
+        /// <summary>
+        /// Simuates the player getting hit
+        /// </summary>
+        /// <returns></returns>
         IEnumerator SimulateHit()
         {
             while (gameObject.activeSelf)

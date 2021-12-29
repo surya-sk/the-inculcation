@@ -12,6 +12,7 @@ namespace CultGame.Utils
         public SceneLoader sceneLoader;
         public GameObject pauseMenu;
         public GameObject otherUI;
+
         // Start is called before the first frame update
         void Start()
         {

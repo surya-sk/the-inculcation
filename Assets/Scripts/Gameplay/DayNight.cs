@@ -21,6 +21,10 @@ namespace CultGame.Gameplay
             StartCoroutine(ChangeTimeOfDay());   
         }
 
+        /// <summary>
+        /// Decreases directional light intensity as time goes on
+        /// </summary>
+        /// <returns></returns>
         IEnumerator ChangeTimeOfDay()
         {
             while(DirectionalLight.intensity > 0.4f)
@@ -31,6 +35,9 @@ namespace CultGame.Gameplay
             }
         }
 
+        /// <summary>
+        /// Updates the Sky and Fog Volume Profile that suits the lighting
+        /// </summary>
         private void UpdateSkybox()
         {
             if (DirectionalLight.intensity > 2)

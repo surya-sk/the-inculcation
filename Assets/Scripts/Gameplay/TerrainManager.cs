@@ -12,17 +12,27 @@ namespace CultGame.Gameplay
 
         public TerrainManager() { }
 
-
+        /// <summary>
+        /// Keeps track of current active terrain
+        /// </summary>
+        /// <param name="index"></param>
         public void SetActiveTerrain(int index)
         {
             currentTerrainIndex = index;
         }
         
+        /// <summary>
+        /// Gets the terrain that's currently active
+        /// </summary>
+        /// <returns>Index of the terrain that's currently active</returns>
         public int GetActiveTerrain()
         {
             return currentTerrainIndex;
         }
 
+        /// <summary>
+        /// Deactivates all terrains excepts the active one, the one before and after it
+        /// </summary>
         private void DeactivateOtherTerrains()
         {
             for (int i = 0; i < terrains.Length; i++)

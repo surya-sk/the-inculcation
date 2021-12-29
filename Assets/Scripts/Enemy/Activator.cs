@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace CultGame.Enemy
 {
+    /// <summary>
+    /// Activates enemy when a collider is triggered
+    /// </summary>
     public class Activator : MonoBehaviour
     {
         public GameObject Enemy;

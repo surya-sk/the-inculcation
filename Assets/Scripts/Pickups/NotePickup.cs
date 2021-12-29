@@ -28,7 +28,6 @@ namespace CultGame.Pickups
 
         void Update()
         {
-            
             if(promptCanvas.enabled && !isReadingText)
             {
                 if (UnityEngine.Input.GetKeyDown(KeyCode.B) || UnityEngine.Input.GetKeyDown(KeyCode.Joystick1Button1))

@@ -38,6 +38,10 @@ namespace CultGame.Player
             m_changed = true;
         }
 
+        /// <summary>
+        /// Changes camera to FP or TP based on player input
+        /// </summary>
+        /// <returns></returns>
         IEnumerator ChangeCamera()
         {
             yield return new WaitForSeconds(0.01f);
