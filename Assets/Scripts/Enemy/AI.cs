@@ -115,7 +115,7 @@ namespace CultGame.Enemy
                 CameraSwitcher.CanChange = false;
                 animator.SetTrigger("Stab");
                 BlackCanvas.enabled = true;
-                SceneLoader.LoadScene(7, 2.0f);
+                SceneLoader.LoadScene(7);
             }
 
             if(hasDetected)

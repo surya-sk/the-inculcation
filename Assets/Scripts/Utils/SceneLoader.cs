@@ -9,7 +9,6 @@ namespace CultGame.Utils
 {
     public class SceneLoader : MonoBehaviour
     {
-        public TextMeshProUGUI loadingText;
         public void ReloadGame()
         {
             StartGame();
@@ -59,24 +58,15 @@ namespace CultGame.Utils
         }
 
 
-        public void LoadScene(int index, float waitTime = 0.0f)
+        public void LoadScene(int index)
         {
-            StartCoroutine(LoadAsync(index, waitTime));
+            StartCoroutine(LoadAsync(index));
         }
 
-        IEnumerator LoadAsync(int sceneIndex, float waitTime)
+        IEnumerator LoadAsync(int sceneIndex)
         {
-            yield return new WaitForSeconds(waitTime);
+            yield return new WaitForSeconds(0);
             AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
-            if (operation.progress < 1.0)
-            {
-                if(loadingText != null)
-                {
-                    loadingText.text = "Loading...";
-                }
-                yield return new WaitForSeconds(3);
-            }
-            loadingText.text = string.Empty;
         }
 
         public void QuitGame()
