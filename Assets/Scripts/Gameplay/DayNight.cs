@@ -62,7 +62,6 @@ namespace CultGame.Gameplay
                 m_DirectionalLight = GetComponent<Light>();
             }
             m_DirectionalLight.intensity = (float)state;
-            UpdateSkybox();
         }
     }
 }
