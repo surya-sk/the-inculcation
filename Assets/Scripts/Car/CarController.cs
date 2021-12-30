@@ -44,9 +44,9 @@ namespace CultGame.Car
             else
             {
                 // SPEED
-                if(!RevSound.isPlaying)
-                    RevSound.Play();
                 m_TorquePower = MaxTorque * Mathf.Clamp(UnityEngine.Input.GetAxis("Vertical"), -1, 1);
+                if(!RevSound.isPlaying && m_TorquePower > 0)
+                    RevSound.Play();
                 WheelRL.brakeTorque = 0f;
                 WheelRR.brakeTorque = 0f;
             }

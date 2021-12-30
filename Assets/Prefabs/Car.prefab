@@ -3110,7 +3110,7 @@ MonoBehaviour:
   WheelRL: {fileID: 8133208479399484140}
   WheelRR: {fileID: 8133208480171597482}
   MaxTorque: 500
-  BrakeTorque: 1000
+  BrakeTorque: 3000
   MaxWheelTurnAngle: 30
   CenterOfMass: {x: 0, y: 0, z: 0}
   EulerTest: {x: 0, y: 0, z: 0}
@@ -3140,7 +3140,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5da3b49723564a54a98fc3bd7af6e00b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.266
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3236,9 +3236,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f4d252014b824e540924da3bc9039e5d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.122
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
