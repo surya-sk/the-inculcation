@@ -875,15 +875,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802643480863, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.08208179
+      value: -0.08208181
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802643480863, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.06534289
+      value: 0.06534292
       objectReference: {fileID: 0}
     - target: {fileID: 8186100802643480863, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.005393304
+      value: 0.005393308
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1edb6e3e782607546b872690415a2a77, type: 3}
@@ -2024,7 +2024,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1676131245, guid: 48e5c8a6e3036e244953042278ab4fc8, type: 3}
       propertyPath: m_text
-      value: '- Walk foward'
+      value: '- Walk to Alyssa'
       objectReference: {fileID: 0}
     - target: {fileID: 1676131245, guid: 48e5c8a6e3036e244953042278ab4fc8, type: 3}
       propertyPath: m_TextStyleHashCode
