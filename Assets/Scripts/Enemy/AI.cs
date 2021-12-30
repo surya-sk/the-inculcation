@@ -159,6 +159,9 @@ namespace CultGame.Enemy
                 {
                     reasonOfDeath = "You were detected".ToUpper();
                     FacePlayer();
+                    animator.SetTrigger("Idle");
+                    walkSound.Stop();
+                    navMeshAgent.isStopped = true;
                     DisablePlayerMovement();
                     hasDetected = true;
                 }
