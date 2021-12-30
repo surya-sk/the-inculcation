@@ -1,4 +1,5 @@
 using CultGame.Player;
+using CultGame.Utils;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ namespace CultGame.Gameplay
         public AudioSource hitSound;
         public CameraSwitcher CameraSwitcher;
         public Canvas BlankCanvas;
+        public SceneLoader SceneLoader;
       
         private void OnTriggerEnter(Collider other)
         {
@@ -33,7 +35,7 @@ namespace CultGame.Gameplay
                 hitSound.Play();
                 BlankCanvas.enabled = true;
                 yield return new WaitForSeconds(5f);
-                SceneManager.LoadScene(5);
+                SceneLoader.LoadScene((int)Scenes.SCENE_3);
             }
         }
     }
