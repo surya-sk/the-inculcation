@@ -20,7 +20,7 @@ namespace CultGame.UI
         {
             Title.enabled = true;
             yield return new WaitForSeconds(5.0f);
-            SceneLoader.LoadScene(4);
+            SceneLoader.LoadScene((int)Scenes.SCENE_2);
         }
     }
 }

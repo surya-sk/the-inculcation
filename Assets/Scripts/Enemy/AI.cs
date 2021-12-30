@@ -144,7 +144,7 @@ namespace CultGame.Enemy
             animator.SetTrigger("Stab");
             BlackCanvas.enabled = true;
             yield return new WaitForSeconds(2f);
-            SceneLoader.LoadScene(7);
+            SceneLoader.LoadScene((int)Scenes.GAME_OVER);
         }
 
         /// <summary>

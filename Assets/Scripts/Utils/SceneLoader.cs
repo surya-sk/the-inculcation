@@ -20,7 +20,7 @@ namespace CultGame.Utils
         {
             Time.timeScale = 1;
             AudioListener.pause = false;
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene((int)Scenes.MAIN_MENU);
         }
 
         public void StartGame()
@@ -32,19 +32,19 @@ namespace CultGame.Utils
                 switch(Path.GetFileName(fileNames[len - 1]))
                 {
                     case "Scene3.sav":
-                        LoadScene(5);
+                        LoadScene((int)Scenes.SCENE_3);
                         break;
                     case "Scene2.sav":
-                        LoadScene(4);
+                        LoadScene((int)Scenes.SCENE_2);
                         break;
                     case "Scene1.sav":
-                        LoadScene(2);
+                        LoadScene((int)Scenes.SCENE_1);
                         break;
                 }
             }
             else
             {
-                LoadScene(1);
+                LoadScene((int)Scenes.OPENING_TEXT);
             }
         }
 
@@ -56,7 +56,7 @@ namespace CultGame.Utils
 
         public void Credits()
         {
-            LoadScene(8);
+            LoadScene((int)Scenes.CREDITS);
         }
 
 
@@ -73,7 +73,7 @@ namespace CultGame.Utils
 
         public void GameOver()
         {
-            SceneManager.LoadSceneAsync(6);
+            SceneManager.LoadSceneAsync((int)Scenes.GAME_OVER);
         }
 
         public string GetSceneName()
