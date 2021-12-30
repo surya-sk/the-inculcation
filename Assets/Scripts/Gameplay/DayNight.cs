@@ -32,7 +32,6 @@ namespace CultGame.Gameplay
             while(m_DirectionalLight.intensity > 0.4f)
             {
                 m_DirectionalLight.intensity -= IntensityMultiplier;
-                Debug.Log(m_DirectionalLight.intensity);
                 UpdateSkybox();
                 yield return new WaitForSeconds(40f);
             }
