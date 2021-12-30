@@ -39,6 +39,7 @@ namespace CultGame.Car
                 m_TorquePower = 0f;
                 WheelRL.brakeTorque = BrakeTorque;
                 WheelRR.brakeTorque = BrakeTorque;
+                RevSound.Stop();
             }
             else
             {

@@ -30,8 +30,9 @@ namespace CultGame.Gameplay
             while(DirectionalLight.intensity > 0.4f)
             {
                 DirectionalLight.intensity -= IntensityMultiplier;
+                Debug.Log(DirectionalLight.intensity);
                 UpdateSkybox();
-                yield return new WaitForSeconds(80f);
+                yield return new WaitForSeconds(40f);
             }
         }
 
@@ -40,7 +41,7 @@ namespace CultGame.Gameplay
         /// </summary>
         private void UpdateSkybox()
         {
-            if (DirectionalLight.intensity > 2)
+            if (DirectionalLight.intensity > 1.7)
                 SkyFogVolume.profile = MorningVolume;
             else if (DirectionalLight.intensity < 1.7 && DirectionalLight.intensity > 0.8)
                 SkyFogVolume.profile = EveningVolume;

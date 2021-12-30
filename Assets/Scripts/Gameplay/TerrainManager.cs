@@ -46,7 +46,6 @@ namespace CultGame.Gameplay
 
         public object CaptureState()
         {
-            print("Writing current index " + currentTerrainIndex);
             return currentTerrainIndex;
         }
 
