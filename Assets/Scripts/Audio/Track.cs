@@ -14,7 +14,7 @@ namespace CultGame.Audio
         public float Volume;
 
         [Range(0.1f, 3f)]
-        public float Pitch;
+        public float Pitch = 1f;
 
         public bool Loop;
 
