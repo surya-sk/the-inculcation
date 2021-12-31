@@ -2,14 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CultGame.Saving;
 
 namespace CultGame.Audio
 {
-    public class MusicManager : MonoBehaviour
+    public class MusicManager : MonoBehaviour, ISaveable
     {
         public Track[] Tracks;
-
         public static MusicManager instance;
+
+        private string m_LastPlayedTrack = "";
 
         private void Awake()
         {
@@ -42,6 +44,7 @@ namespace CultGame.Audio
                 return;
             }
             track.Source.Play();
+            m_LastPlayedTrack = track.Name;
         }
 
         public void StopAll()
@@ -52,6 +55,20 @@ namespace CultGame.Audio
                 {
                     track.Source.Stop();
                 }
+            }
+        }
+
+        public object CaptureState()
+        {
+            return m_LastPlayedTrack;
+        }
+
+        public void RestoreState(object state)
+        {
+            m_LastPlayedTrack = (string)state;
+            if(m_LastPlayedTrack != "")
+            {
+                Play(m_LastPlayedTrack);
             }
         }
     }

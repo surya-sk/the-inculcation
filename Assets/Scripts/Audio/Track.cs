@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace CultGame.Audio
 {
-    public class Track : MonoBehaviour
+    [System.Serializable]
+    public class Track
     {
         public string Name;
         public AudioClip Clip;
