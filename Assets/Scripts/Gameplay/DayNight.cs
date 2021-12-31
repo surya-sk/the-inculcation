@@ -15,6 +15,7 @@ namespace CultGame.Gameplay
         public VolumeProfile NightVolume;
         
         private Light m_DirectionalLight;
+        private float m_SavedIntensity = 0;
     
         // Start is called before the first frame update
         void Start()
@@ -31,6 +32,11 @@ namespace CultGame.Gameplay
         {
             while(m_DirectionalLight.intensity > 0.4f)
             {
+                if(m_SavedIntensity != 0)
+                {
+                    m_DirectionalLight.intensity = m_SavedIntensity;
+                    m_SavedIntensity = 0;
+                }
                 m_DirectionalLight.intensity -= IntensityMultiplier;
                 UpdateSkybox();
                 yield return new WaitForSeconds(40f);
@@ -61,7 +67,9 @@ namespace CultGame.Gameplay
             {
                 m_DirectionalLight = GetComponent<Light>();
             }
-            m_DirectionalLight.intensity = (float)state;
+            m_SavedIntensity = (float)state;
+            m_DirectionalLight.intensity = m_SavedIntensity;
+            UpdateSkybox();
         }
     }
 }
