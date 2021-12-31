@@ -71,5 +71,6 @@ InitTestScene*.unity.meta
 InitTestScene*.unity
 
 UWP
+UWP_BurstDebugInformation_DoNotShip
 
 # End of https://www.toptal.com/developers/gitignore/api/unity
