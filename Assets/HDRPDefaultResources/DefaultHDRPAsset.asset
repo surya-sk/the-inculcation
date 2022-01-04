@@ -243,11 +243,11 @@ MonoBehaviour:
       Fog_Budget:
       - 0.166
       - 0.333
-      - 0.666
+      - 0.51
       Fog_DepthRatio:
       - 0.5
       - 0.5
-      - 0.5
+      - 0.36
     m_ObsoleteLightLayerName0: 
     m_ObsoleteLightLayerName1: 
     m_ObsoleteLightLayerName2: 
