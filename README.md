@@ -3,9 +3,9 @@
 
 The Inculcation is a mystery video game made using the Unity Engine. It follows a man who is on the lookout for his sister who vanished after she went for a grieveing session after her best friend's death. The game involves finding clues and uncovering what happened to her. 
 
-The game is available to download from the Microsoft Store for Windows 10/11 PCs. The game installer is available to download for free using Github Releases, but getting it from the Store is recommended as updates are automatic.
+The game installer is available to download for free using Github Releases for 64-bit Windows PCs. A UWP release for Xbox and PC was planned, but I'm currently having performance issues with HDRP when doing UWP builds.
 
-<a href='https://www.microsoft.com/store/apps/9PKHWQW25THW'><img src='https://developer.microsoft.com/en-us/store/badges/images/English_get-it-from-MS.png' alt='Store Link' height="50px"/></a>
+<!--<a href='https://www.microsoft.com/store/apps/9PKHWQW25THW'><img src='https://developer.microsoft.com/en-us/store/badges/images/English_get-it-from-MS.png' alt='Store Link' height="50px"/></a>-->
 
 # Description
 The game is built using Unity 2021.2. The game makes use of Unity's HDRP. The focus of the game is on its visuals, which were acheieved using Unity's High Definition Rendering Pipeline and some post-processing. My goal with this game was to explore visuals, animation and camera controls in Unity. The game can be played using both first-person and third-person perspectives. A huge chunk of the game takes place in one scene, with each terrain loading only when needed and unloading when the player is no longer on it. The third person camera uses a Cinemachine camera. The first bit of the game has some (sloppy) driving because I just wanted to learn how to do it. The game uses a couple of paid assets, mostly trees and vegetation.
