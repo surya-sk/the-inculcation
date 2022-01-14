@@ -5,7 +5,7 @@ The Inculcation is a mystery video game made using the Unity Engine. It follows 
 
 The game is available to download for Windows 10/11 PCs and Xbox One/Series X devices for C$2.50 from the Microsoft Store. This is mostly just used as a donation scheme since the game is open-source; you can download the game for free on PC by downloading the zip file from Releases. The Store is the recommended way of getting it, since updates are automatic and you also get to suuport me :)
 
-<a href='	https://www.microsoft.com/store/apps/9NL83N6P1RM9'><img src='https://developer.microsoft.com/en-us/store/badges/images/English_get-it-from-MS.png' alt='Store Link' height="50px"/></a>
+<a href='https://www.microsoft.com/store/apps/9NL83N6P1RM9'><img src='https://developer.microsoft.com/en-us/store/badges/images/English_get-it-from-MS.png' alt='Store Link' height="50px"/></a>
 
 # Description
 The game is built using Unity 2021.2. The game makes use of Unity's HDRP. The focus of the game is on its visuals, which were acheieved using Unity's High Definition Rendering Pipeline and some post-processing. My goal with this game was to explore visuals, animation and camera controls in Unity. The game can be played using both first-person and third-person perspectives. A huge chunk of the game takes place in one scene, with each terrain loading only when needed and unloading when the player is no longer on it. The third person camera uses a Cinemachine camera. The first bit of the game has some (sloppy) driving because I just wanted to learn how to do it. The game uses a couple of paid assets, mostly trees and vegetation.
