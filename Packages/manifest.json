@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.unity.burst": "1.7.1",
     "com.unity.cinemachine": "2.8.2",
     "com.unity.collab-proxy": "1.15.4",
     "com.unity.ide.visualstudio": "2.0.12",
