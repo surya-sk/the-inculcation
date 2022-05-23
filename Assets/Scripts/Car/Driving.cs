@@ -11,9 +11,7 @@ namespace CultGame.Car
         public GameObject cinemachineCamera;
         public GameObject carCamera;
         public bool isDriving;
-        public bool canGetOut;
         public GameObject nextObjectiveToExitCar;
-        bool hasStoppedDriving = false;
 
         public AudioSource engineStartSound;
 
@@ -35,8 +33,7 @@ namespace CultGame.Car
             }
             else
             {
-                if(!hasStoppedDriving)
-                    DeactivateDriving();
+                 DeactivateDriving();
             }
         }
 
@@ -68,7 +65,6 @@ namespace CultGame.Car
             GetComponent<CarController>().enabled = false;
             engineStartSound.Stop();
             isDriving = false;
-            hasStoppedDriving = true;
         }
 
         private void OnTriggerEnter(Collider other)
